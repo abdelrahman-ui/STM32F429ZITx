@@ -43,16 +43,16 @@
 
 			/* Macros Of Pins */
 
-#define  PIN0										0
-#define  PIN1										1
-#define  PIN2										2
-#define  PIN3										3
-#define  PIN4										4
-#define  PIN5										5
-#define  PIN6										6
-#define  PIN7										7
-#define  PIN8										8
-#define  PIN9										9
+#define  PIN0									   	0
+#define  PIN1									   	1
+#define  PIN2									   	2
+#define  PIN3									   	3
+#define  PIN4									   	4
+#define  PIN5									   	5
+#define  PIN6									   	6
+#define  PIN7									   	7
+#define  PIN8									   	8
+#define  PIN9									   	9
 #define  PIN10										10
 #define  PIN11										11
 #define  PIN12										12
@@ -60,30 +60,31 @@
 #define  PIN14										14
 #define  PIN15										15
 			/*Macros Of Mode*/
-#define MODE_INPUT									00
-#define MODE_OUTPUT									01
-#define MODE_ALTF									10
-#define MODE_ANALOG									11
-
+#define MODE_INPUT							 	((u8)0x00)
+#define MODE_OUTPUT							 	((u8)0x01)
+#define MODE_ALTF								 	((u8)0x10)
+#define MODE_ANALOG							 	((u8)0x11)
+																 
 			/*Macros Of Type*/
-#define  OUTPUT_TYPE_PUSH_PULL						0
-#define  OUTPUT_TYPE_OPEN_DRAIN						1
+#define  OUTPUT_TYPE_PUSH_PULL		((u8)0x0)
+#define  OUTPUT_TYPE_OPEN_DRAIN		((u8)0x1)
 			/*Macros Of Speed*/
 			
-#define OUTPUT_LOW_SPEED							00
-#define OUTPUT_MEDUIM_SPEED							01
-#define OUTPUT_HIGH_SPEED							10
-#define OUTPUT_VERY_HIGH_SPEED						11		
-			/*Macros Of PULL*/
-#define PULL_OFF									00							
-#define PULL_UP										01
-#define PULL_DOWN									11
-			/*Macros Write Data */
-#define  HIGH										1
-#define  LOW										0			
-
-			/*Macros Of Pin 16  */
-#define  LOCK_PIN									16
+#define OUTPUT_LOW_SPEED					((u8)0x00)
+#define OUTPUT_MEDUIM_SPEED				((u8)0x01)
+#define OUTPUT_HIGH_SPEED					((u8)0x10)
+#define OUTPUT_VERY_HIGH_SPEED		((u8)0x11)		
+			/*Macros Of PULL*/	
+#define PULL_OFF									((u8)0x00)							
+#define PULL_UP										((u8)0x01)
+#define PULL_DOWN									((u8)0x11)
+																			
+			/*Macros Write Data */	
+#define  HIGH											((u8)0x1)
+#define  LOW											((u8)0x0)		
+		
+			/*Macros Of Pin 16  */		
+#define  LOCK_PIN										16
 
 /*		Function Prototypes */
 

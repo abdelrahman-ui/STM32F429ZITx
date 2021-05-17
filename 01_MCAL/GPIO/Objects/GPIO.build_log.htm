@@ -40,13 +40,9 @@ GPIO_program.c(64): error: expected expression
 GPIO_program.c(68): error: expected expression
                                          GPIOC_MODER | =(copy_u8MODE << (2*copy_u8PIN));
                                                        ^
-GPIO_program.c(69): error: expected ';' after break statement
-                      break 
-                           ^
-                           ;
-GPIO_program.c(72): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+GPIO_program.c(72): error: expected expression
                                          GPIOD_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                                                       ^
+                                                       ^
 GPIO_program.c(76): error: expected expression
                                          GPIOE_MODER | =(copy_u8MODE << (2*copy_u8PIN));
                                                        ^
@@ -62,9 +58,6 @@ GPIO_program.c(88): error: expected expression
 GPIO_program.c(94): error: expected expression
          else()
          ^
-GPIO_program.c(101): error: extraneous closing brace ('}')
- }
- ^
 GPIO_program.c(119): error: expected expression
                                             GPIOA_OTYPER | =(copy_u8Type << (copy_u8PIN));
                                                            ^
@@ -74,13 +67,9 @@ GPIO_program.c(124): error: expected expression
 GPIO_program.c(128): error: expected expression
                                                 GPIOC_OTYPER | =(copy_u8Type << (copy_u8PIN));
                                                                ^
-GPIO_program.c(129): error: expected ';' after break statement
-                              break                                      
-                                   ^
-                                   ;
-GPIO_program.c(132): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+GPIO_program.c(132): error: expected expression
                                                 GPIOD_OTYPER | =(copy_u8Type << (copy_u8PIN));
-                                                                                             ^
+                                                               ^
 GPIO_program.c(136): error: expected expression
                                                 GPIOE_OTYPER | =(copy_u8Type<< (copy_u8PIN));
                                                                ^
@@ -94,15 +83,18 @@ GPIO_program.c(148): error: expected expression
                                                 GPIOH_OTYPER | =(copy_u8Type<< (copy_u8PIN));
                                                                ^
 GPIO_program.c(174): error: expected expression
-                                            GPIOA_OSPEEDR | =(copy_u8Type << (copy_u8Speed));
+                                            GPIOA_OSPEEDR | =(copy_u8Speed << (2*copy_u8PIN));
                                                             ^
-GPIO_program.c(174): error: use of undeclared identifier 'copy_u8Type'
-                                            GPIOA_OSPEEDR | =(copy_u8Type << (copy_u8Speed));
-                                                              ^
+GPIO_program.c(179): error: expected expression
+                                                 GPIOB_OSPEEDR| =(copy_u8Speed << (2*copy_u8PIN));
+                                                                ^
+GPIO_program.c(183): error: expected expression
+                                                GPIOC_OSPEEDR | =(copy_u8Speed << (2*copy_u8PIN));
+                                                                ^
 fatal error: too many errors emitted, stopping now [-ferror-limit=]
-4 warnings and 20 errors generated.
+2 warnings and 20 errors generated.
 compiling GPIO_program.c...
-".\Objects\GPIO.axf" - 19 Error(s), 4 Warning(s).
+".\Objects\GPIO.axf" - 19 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
