@@ -1,0 +1,218 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abdelrahman Magdy, Value, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  E:\Keil_Packs\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\03_NVIC\NVIC_Driver.uvprojx
+Project File Date:  05/24/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
+Rebuild target 'app'
+compiling main.c...
+NVIC_program.c(78): error: expected parameter declarator
+           NVIC_ICER0= (1U <<Copy_u8IntNum);  
+           ^
+./NVIC_private.h(50): note: expanded from macro 'NVIC_ICER0'
+#define NVIC_ICER0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X180))))     
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(78): error: expected ')'
+./NVIC_private.h(50): note: expanded from macro 'NVIC_ICER0'
+#define NVIC_ICER0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X180))))     
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(78): note: to match this '('
+./NVIC_private.h(50): note: expanded from macro 'NVIC_ICER0'
+#define NVIC_ICER0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X180))))     
+                                                                                             ^
+NVIC_program.c(78): error: expected expression
+           NVIC_ICER0= (1U <<Copy_u8IntNum);  
+                     ^
+NVIC_program.c(84): error: expected parameter declarator
+                NVIC_ICER1= (1U <<Copy_u8IntNum); 
+                ^
+./NVIC_private.h(51): note: expanded from macro 'NVIC_ICER1'
+#define NVIC_ICER1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X184))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(84): error: expected ')'
+./NVIC_private.h(51): note: expanded from macro 'NVIC_ICER1'
+#define NVIC_ICER1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X184))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(84): note: to match this '('
+./NVIC_private.h(51): note: expanded from macro 'NVIC_ICER1'
+#define NVIC_ICER1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X184))))
+                                                                                             ^
+NVIC_program.c(84): error: expected expression
+                NVIC_ICER1= (1U <<Copy_u8IntNum); 
+                          ^
+NVIC_program.c(90): error: expected parameter declarator
+                NVIC_ICER2= (1U <<Copy_u8IntNum);
+                ^
+./NVIC_private.h(52): note: expanded from macro 'NVIC_ICER2'
+#define NVIC_ICER2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X188))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(90): error: expected ')'
+./NVIC_private.h(52): note: expanded from macro 'NVIC_ICER2'
+#define NVIC_ICER2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X188))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(90): note: to match this '('
+./NVIC_private.h(52): note: expanded from macro 'NVIC_ICER2'
+#define NVIC_ICER2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X188))))
+                                                                                             ^
+NVIC_program.c(90): error: expected expression
+                NVIC_ICER2= (1U <<Copy_u8IntNum);
+                          ^
+NVIC_program.c(106): error: expected parameter declarator
+           NVIC_ISPR0= (1U <<Copy_u8IntNum);  
+           ^
+./NVIC_private.h(58): note: expanded from macro 'NVIC_ISPR0'
+#define NVIC_ISPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X200))))     
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(106): error: expected ')'
+./NVIC_private.h(58): note: expanded from macro 'NVIC_ISPR0'
+#define NVIC_ISPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X200))))     
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(106): note: to match this '('
+./NVIC_private.h(58): note: expanded from macro 'NVIC_ISPR0'
+#define NVIC_ISPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X200))))     
+                                                                                             ^
+NVIC_program.c(106): error: expected expression
+           NVIC_ISPR0= (1U <<Copy_u8IntNum);  
+                     ^
+NVIC_program.c(112): error: expected parameter declarator
+                NVIC_ISPR1= (1U <<Copy_u8IntNum); 
+                ^
+./NVIC_private.h(59): note: expanded from macro 'NVIC_ISPR1'
+#define NVIC_ISPR1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X204))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(112): error: expected ')'
+./NVIC_private.h(59): note: expanded from macro 'NVIC_ISPR1'
+#define NVIC_ISPR1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X204))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(112): note: to match this '('
+./NVIC_private.h(59): note: expanded from macro 'NVIC_ISPR1'
+#define NVIC_ISPR1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X204))))
+                                                                                             ^
+NVIC_program.c(112): error: expected expression
+                NVIC_ISPR1= (1U <<Copy_u8IntNum); 
+                          ^
+NVIC_program.c(118): error: expected parameter declarator
+                NVIC_ISPR2= (1U <<Copy_u8IntNum);
+                ^
+./NVIC_private.h(60): note: expanded from macro 'NVIC_ISPR2'
+#define NVIC_ISPR2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X208))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(118): error: expected ')'
+./NVIC_private.h(60): note: expanded from macro 'NVIC_ISPR2'
+#define NVIC_ISPR2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X208))))
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+NVIC_program.c(118): note: to match this '('
+./NVIC_private.h(60): note: expanded from macro 'NVIC_ISPR2'
+#define NVIC_ISPR2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X208))))
+                                                                                             ^
+NVIC_program.c(118): error: expected expression
+                NVIC_ISPR2= (1U <<Copy_u8IntNum);
+                          ^
+NVIC_program.c(134): error: expected parameter declarator
+           NVIC_ICPR0= (1U <<Copy_u8IntNum);  
+           ^
+./NVIC_private.h(66): note: expanded from macro 'NVIC_ICPR0'
+#define NVIC_ICPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X280))))     
+                                                                                               ^
+./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
+#define  NVIC_Base_Address                      0xE000E100      
+                                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+compiling NVIC_program.c...
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
+".\Objects\NVIC_Driver.axf" - 19 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_app
+  E:\Keil_Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  E:\Keil_Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

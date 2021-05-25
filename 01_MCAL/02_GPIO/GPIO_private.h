@@ -149,7 +149,7 @@
 
 #define  GPIOG_MODER									(*((u32 *) (GPIOG_BASE_ADDRESS +0X00)))
 #define  GPIOG_OTYPER									(*((u32 *) (GPIOG_BASE_ADDRESS +0X04)))
-#define  GPIOG_OSPEEDR								    (*((u32 *) (GPIOG_BASE_ADDRESS +0X08)))
+#define  GPIOG_OSPEEDR								(*((u32 *) (GPIOG_BASE_ADDRESS +0X08)))
 #define  GPIOG_PUPDR									(*((u32 *) (GPIOG_BASE_ADDRESS +0X0C)))
 #define  GPIOG_IDR										(*((u32 *) (GPIOG_BASE_ADDRESS +0X10)))
 #define  GPIOG_ODR										(*((u32 *) (GPIOG_BASE_ADDRESS +0X14)))
@@ -166,7 +166,7 @@
 
 #define  GPIOH_MODER									(*((u32 *) (GPIOH_BASE_ADDRESS +0X00)))
 #define  GPIOH_OTYPER									(*((u32 *) (GPIOH_BASE_ADDRESS +0X04)))
-#define  GPIOH_OSPEEDR								    (*((u32 *) (GPIOH_BASE_ADDRESS +0X08)))
+#define  GPIOH_OSPEEDR								(*((u32 *) (GPIOH_BASE_ADDRESS +0X08)))
 #define  GPIOH_PUPDR									(*((u32 *) (GPIOH_BASE_ADDRESS +0X0C)))
 #define  GPIOH_IDR										(*((u32 *) (GPIOH_BASE_ADDRESS +0X10)))
 #define  GPIOH_ODR										(*((u32 *) (GPIOH_BASE_ADDRESS +0X14)))

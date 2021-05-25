@@ -17,84 +17,33 @@ Library Manager: ArmAr.exe V6.16
 Hex Converter:   FromElf.exe V6.16
 CPU DLL:         SARMCM3.DLL V5.34.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      UL2CM3.DLL V1.163.9.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
-E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\GPIO\GPIO.uvprojx
-Project File Date:  05/17/2021
+E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\02_GPIO\GPIO.uvprojx
+Project File Date:  05/21/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-GPIO_program.c(25): warning: In file included from...
+main.c(25): warning: In file included from...
 ./GPIO_config.h(37): warning: no newline at end of file [-Wnewline-eof]
 #endif /* GPIO_CONFIG_H_ */
                            ^
-GPIO_program.c(59): error: expected expression
-                                          GPIOA_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                        ^
-GPIO_program.c(64): error: expected expression
-                                         GPIOB_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(68): error: expected expression
-                                         GPIOC_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(72): error: expected expression
-                                         GPIOD_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(76): error: expected expression
-                                         GPIOE_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(80): error: expected expression
-                                         GPIOF_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(84): error: expected expression
-                                         GPIOG_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(88): error: expected expression
-                                         GPIOH_MODER | =(copy_u8MODE << (2*copy_u8PIN));
-                                                       ^
-GPIO_program.c(94): error: expected expression
-         else()
-         ^
-GPIO_program.c(119): error: expected expression
-                                            GPIOA_OTYPER | =(copy_u8Type << (copy_u8PIN));
-                                                           ^
-GPIO_program.c(124): error: expected expression
-                                                 GPIOB_OTYPER| =(copy_u8Type << (copy_u8PIN));
-                                                               ^
-GPIO_program.c(128): error: expected expression
-                                                GPIOC_OTYPER | =(copy_u8Type << (copy_u8PIN));
-                                                               ^
-GPIO_program.c(132): error: expected expression
-                                                GPIOD_OTYPER | =(copy_u8Type << (copy_u8PIN));
-                                                               ^
-GPIO_program.c(136): error: expected expression
-                                                GPIOE_OTYPER | =(copy_u8Type<< (copy_u8PIN));
-                                                               ^
-GPIO_program.c(140): error: expected expression
-                                                 GPIOF_OTYPER| =(copy_u8Type << (copy_u8PIN));
-                                                               ^
-GPIO_program.c(144): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                                            GPIOG_OTYPER |= (copy_u8Type << (copy_u8PIN));
-                                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
-GPIO_program.c(148): error: expected expression
-                                                GPIOH_OTYPER | =(copy_u8Type<< (copy_u8PIN));
-                                                               ^
-GPIO_program.c(174): error: expected expression
-                                            GPIOA_OSPEEDR | =(copy_u8Speed << (2*copy_u8PIN));
+main.c(51): error: expected expression
+        RCC_AHB1ENR =(1U<<6);
+        ^
+main.c(41): note: expanded from macro 'RCC_AHB1ENR'
+#define RCC_AHB1ENR                                     (*((uint32*)0x40023830))
+                                                                   ^
+main.c(51): error: use of undeclared identifier 'uint32'
+main.c(41): note: expanded from macro 'RCC_AHB1ENR'
+#define RCC_AHB1ENR                                     (*((uint32*)0x40023830))
                                                             ^
-GPIO_program.c(179): error: expected expression
-                                                 GPIOB_OSPEEDR| =(copy_u8Speed << (2*copy_u8PIN));
-                                                                ^
-GPIO_program.c(183): error: expected expression
-                                                GPIOC_OSPEEDR | =(copy_u8Speed << (2*copy_u8PIN));
-                                                                ^
-fatal error: too many errors emitted, stopping now [-ferror-limit=]
-2 warnings and 20 errors generated.
-compiling GPIO_program.c...
-".\Objects\GPIO.axf" - 19 Error(s), 2 Warning(s).
+1 warning and 2 errors generated.
+compiling main.c...
+".\Objects\GPIO.axf" - 2 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -120,11 +69,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
       Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
 Target not created.
 Build Time Elapsed:  00:00:01
 </pre>
