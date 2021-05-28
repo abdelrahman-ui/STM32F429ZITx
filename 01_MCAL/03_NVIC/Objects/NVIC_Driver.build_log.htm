@@ -26,161 +26,58 @@ Project File Date:  05/24/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
-Rebuild target 'app'
-compiling main.c...
-NVIC_program.c(78): error: expected parameter declarator
-           NVIC_ICER0= (1U <<Copy_u8IntNum);  
-           ^
-./NVIC_private.h(50): note: expanded from macro 'NVIC_ICER0'
-#define NVIC_ICER0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X180))))     
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
+Build target 'app'
+NVIC_program.c(164): warning: implicit conversion loses integer precision: 'unsigned long' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+          Local_u8ActiveState= NVIC_IABR0 &(1<<Copy_u8IntNum);  
+                             ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+NVIC_program.c(170): warning: implicit conversion loses integer precision: 'unsigned long' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                Local_u8ActiveState= NVIC_IABR0 &(1<<Copy_u8IntNum); 
+                                   ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+NVIC_program.c(176): warning: implicit conversion loses integer precision: 'unsigned long' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                Local_u8ActiveState= NVIC_IABR0 &(1<<Copy_u8IntNum); 
+                                   ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+NVIC_program.c(199): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                                                NVIC_IPR[Copy_u8IntNum]= (Copy_u8GroupPriority<<4U);             
+                                                                       ~  ~~~~~~~~~~~~~~~~~~~~^~~~
+NVIC_program.c(204): error: expected expression
+                                                SCB_AIRCR=0X05FA0400 ;                                   
                                                 ^
-NVIC_program.c(78): error: expected ')'
-./NVIC_private.h(50): note: expanded from macro 'NVIC_ICER0'
-#define NVIC_ICER0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X180))))     
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
+./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
+#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
+                                                        ^
+NVIC_program.c(205): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                                                NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<5U)|(Copy_u8SubGroupPriority << 4U)      ;                                                                        
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NVIC_program.c(210): error: expected expression
+                                                SCB_AIRCR =0X05FA0500 ;                                  
                                                 ^
-NVIC_program.c(78): note: to match this '('
-./NVIC_private.h(50): note: expanded from macro 'NVIC_ICER0'
-#define NVIC_ICER0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X180))))     
-                                                                                             ^
-NVIC_program.c(78): error: expected expression
-           NVIC_ICER0= (1U <<Copy_u8IntNum);  
-                     ^
-NVIC_program.c(84): error: expected parameter declarator
-                NVIC_ICER1= (1U <<Copy_u8IntNum); 
-                ^
-./NVIC_private.h(51): note: expanded from macro 'NVIC_ICER1'
-#define NVIC_ICER1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X184))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
+./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
+#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
+                                                        ^
+NVIC_program.c(211): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                                                        NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<6U)|(Copy_u8SubGroupPriority << 4U)      ;                                                                                                        
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NVIC_program.c(216): error: expected expression
+                                                SCB_AIRCR=0X05FA0600 ;                                   
                                                 ^
-NVIC_program.c(84): error: expected ')'
-./NVIC_private.h(51): note: expanded from macro 'NVIC_ICER1'
-#define NVIC_ICER1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X184))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
+./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
+#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
+                                                        ^
+NVIC_program.c(217): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                                                NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<7U)|(Copy_u8SubGroupPriority << 4U)      ;
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NVIC_program.c(222): error: expected expression
+                                                SCB_AIRCR =0X05FA0700 ;
                                                 ^
-NVIC_program.c(84): note: to match this '('
-./NVIC_private.h(51): note: expanded from macro 'NVIC_ICER1'
-#define NVIC_ICER1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X184))))
-                                                                                             ^
-NVIC_program.c(84): error: expected expression
-                NVIC_ICER1= (1U <<Copy_u8IntNum); 
-                          ^
-NVIC_program.c(90): error: expected parameter declarator
-                NVIC_ICER2= (1U <<Copy_u8IntNum);
-                ^
-./NVIC_private.h(52): note: expanded from macro 'NVIC_ICER2'
-#define NVIC_ICER2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X188))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(90): error: expected ')'
-./NVIC_private.h(52): note: expanded from macro 'NVIC_ICER2'
-#define NVIC_ICER2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X188))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(90): note: to match this '('
-./NVIC_private.h(52): note: expanded from macro 'NVIC_ICER2'
-#define NVIC_ICER2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X188))))
-                                                                                             ^
-NVIC_program.c(90): error: expected expression
-                NVIC_ICER2= (1U <<Copy_u8IntNum);
-                          ^
-NVIC_program.c(106): error: expected parameter declarator
-           NVIC_ISPR0= (1U <<Copy_u8IntNum);  
-           ^
-./NVIC_private.h(58): note: expanded from macro 'NVIC_ISPR0'
-#define NVIC_ISPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X200))))     
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(106): error: expected ')'
-./NVIC_private.h(58): note: expanded from macro 'NVIC_ISPR0'
-#define NVIC_ISPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X200))))     
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(106): note: to match this '('
-./NVIC_private.h(58): note: expanded from macro 'NVIC_ISPR0'
-#define NVIC_ISPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X200))))     
-                                                                                             ^
-NVIC_program.c(106): error: expected expression
-           NVIC_ISPR0= (1U <<Copy_u8IntNum);  
-                     ^
-NVIC_program.c(112): error: expected parameter declarator
-                NVIC_ISPR1= (1U <<Copy_u8IntNum); 
-                ^
-./NVIC_private.h(59): note: expanded from macro 'NVIC_ISPR1'
-#define NVIC_ISPR1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X204))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(112): error: expected ')'
-./NVIC_private.h(59): note: expanded from macro 'NVIC_ISPR1'
-#define NVIC_ISPR1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X204))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(112): note: to match this '('
-./NVIC_private.h(59): note: expanded from macro 'NVIC_ISPR1'
-#define NVIC_ISPR1                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X204))))
-                                                                                             ^
-NVIC_program.c(112): error: expected expression
-                NVIC_ISPR1= (1U <<Copy_u8IntNum); 
-                          ^
-NVIC_program.c(118): error: expected parameter declarator
-                NVIC_ISPR2= (1U <<Copy_u8IntNum);
-                ^
-./NVIC_private.h(60): note: expanded from macro 'NVIC_ISPR2'
-#define NVIC_ISPR2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X208))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(118): error: expected ')'
-./NVIC_private.h(60): note: expanded from macro 'NVIC_ISPR2'
-#define NVIC_ISPR2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X208))))
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-NVIC_program.c(118): note: to match this '('
-./NVIC_private.h(60): note: expanded from macro 'NVIC_ISPR2'
-#define NVIC_ISPR2                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X208))))
-                                                                                             ^
-NVIC_program.c(118): error: expected expression
-                NVIC_ISPR2= (1U <<Copy_u8IntNum);
-                          ^
-NVIC_program.c(134): error: expected parameter declarator
-           NVIC_ICPR0= (1U <<Copy_u8IntNum);  
-           ^
-./NVIC_private.h(66): note: expanded from macro 'NVIC_ICPR0'
-#define NVIC_ICPR0                                                      (volatile (*((u32 *) ( NVIC_Base_Address +0X280))))     
-                                                                                               ^
-./NVIC_private.h(34): note: expanded from macro 'NVIC_Base_Address'
-#define  NVIC_Base_Address                      0xE000E100      
-                                                ^
-fatal error: too many errors emitted, stopping now [-ferror-limit=]
-20 errors generated.
+./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
+#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
+                                                        ^
+NVIC_program.c(223): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                                                NVIC_IPR[Copy_u8IntNum]=(Copy_u8SubGroupPriority << 4U) ;
+                                                                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+8 warnings and 4 errors generated.
 compiling NVIC_program.c...
-assembling startup_stm32f429xx.s...
-compiling system_stm32f4xx.c...
-".\Objects\NVIC_Driver.axf" - 19 Error(s), 0 Warning(s).
+".\Objects\NVIC_Driver.axf" - 4 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -206,10 +103,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:2.6.3
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
 Target not created.
 Build Time Elapsed:  00:00:00
