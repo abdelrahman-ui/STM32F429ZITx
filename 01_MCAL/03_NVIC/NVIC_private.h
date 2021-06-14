@@ -83,7 +83,7 @@
 			  *  u8 To  Move By Byte Not Register 
 ***************************************************/
 
-#define NVIC_IPR						        ((volatile u8 *) ( NVIC_Base_Address +0X400))
+#define NVIC_IPR					       ((volatile u8 *)(NVIC_Base_Address +0X400))
 /***********************************************************************************
 	-----> Macros
 			  *  Register Map	 SCB_BASE_ADDRESS
@@ -95,7 +95,7 @@
 	*  Register Map --------->AIRCR To Submet The Group & SubGroup
 	* Statuse Of Group And Sub
 */
-#define  SCB_AIRCR					`	  (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
+#define  SCB_AIRCR 								(*((volatile u32 *) ( SCB_Base_Address + 0xc)))
 
 
 /* Constant */

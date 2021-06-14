@@ -38,7 +38,7 @@
 
 
 
-
+															
 
 /********************************************************** Start_FUNCTION  **********************************************************/
 /*		Function :	
@@ -194,14 +194,14 @@ void MNVIC_voidSetPriority(u8 Copy_u8IntNum, u8 Copy_u8GroupPriority , u8 Copy_u
 			/* All For Group */
 	   case GROUP_PRIORITY_CFG0:		
 						/*		PassWord + Case (  (4) For Group  &  (0) For SubGroub		*/	
-						(*((volatile u32 *) ( SCB_Base_Address + 0xc)))=0x05FA0300;
+						SCB_AIRCR =0x05FA0300;
 							/*	At IPR[Indx] Put The Four Bit For Group  */		
 						NVIC_IPR[Copy_u8IntNum]= (Copy_u8GroupPriority<<4U);		 
 	   break ;
    /**************************/		 
 	   case GROUP_PRIORITY_CFG1 :								 
 						/*		PassWord + Case (  (3) For Group  &  (1) For SubGroub		*/
-						SCB_AIRCR=0X05FA0400 ;					 
+						SCB_AIRCR |= 0x05FA0400 ;					 
 						NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<5U)|(Copy_u8SubGroupPriority << 4U)	;									 
 	   	break ;	
    /**************************/			 

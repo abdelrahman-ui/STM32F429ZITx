@@ -26,7 +26,10 @@ Project File Date:  05/24/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
-Build target 'app'
+Rebuild target 'app'
+compiling main.c...
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
 NVIC_program.c(164): warning: implicit conversion loses integer precision: 'unsigned long' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
           Local_u8ActiveState= NVIC_IABR0 &(1<<Copy_u8IntNum);  
                              ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
@@ -39,45 +42,23 @@ NVIC_program.c(176): warning: implicit conversion loses integer precision: 'unsi
 NVIC_program.c(199): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
                                                 NVIC_IPR[Copy_u8IntNum]= (Copy_u8GroupPriority<<4U);             
                                                                        ~  ~~~~~~~~~~~~~~~~~~~~^~~~
-NVIC_program.c(204): error: expected expression
-                                                SCB_AIRCR=0X05FA0400 ;                                   
-                                                ^
-./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
-#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
-                                                        ^
 NVIC_program.c(205): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
                                                 NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<5U)|(Copy_u8SubGroupPriority << 4U)      ;                                                                        
                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-NVIC_program.c(210): error: expected expression
-                                                SCB_AIRCR =0X05FA0500 ;                                  
-                                                ^
-./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
-#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
-                                                        ^
 NVIC_program.c(211): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
                                                         NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<6U)|(Copy_u8SubGroupPriority << 4U)      ;                                                                                                        
                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-NVIC_program.c(216): error: expected expression
-                                                SCB_AIRCR=0X05FA0600 ;                                   
-                                                ^
-./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
-#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
-                                                        ^
 NVIC_program.c(217): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
                                                 NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<7U)|(Copy_u8SubGroupPriority << 4U)      ;
                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-NVIC_program.c(222): error: expected expression
-                                                SCB_AIRCR =0X05FA0700 ;
-                                                ^
-./NVIC_private.h(98): note: expanded from macro 'SCB_AIRCR'
-#define  SCB_AIRCR                                      `         (*((volatile u32 *) ( SCB_Base_Address + 0xc)))
-                                                        ^
 NVIC_program.c(223): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
                                                 NVIC_IPR[Copy_u8IntNum]=(Copy_u8SubGroupPriority << 4U) ;
                                                                        ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
-8 warnings and 4 errors generated.
+8 warnings generated.
 compiling NVIC_program.c...
-".\Objects\NVIC_Driver.axf" - 4 Error(s), 8 Warning(s).
+linking...
+Program Size: Code=380 RO-data=444 RW-data=0 ZI-data=1632  
+".\Objects\NVIC_Driver.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -108,8 +89,7 @@ Package Vendor: Keil
       Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Target not created.
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
