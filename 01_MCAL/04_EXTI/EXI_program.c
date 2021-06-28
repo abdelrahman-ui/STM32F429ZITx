@@ -111,37 +111,37 @@ void MEXTI_voidSelectPort(  u8 Copy_u8LineNum  , u8 Copy_u8PortID  )
 	if(Copy_u8LineNum <= 3 )
 	{
 		/* Make The Place =0000 -----> Safty*/
-		SYSCFG_EXTICR1& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR1 &=~(0b1111<<(4*Copy_u8LineNum )) ;
 		/* Sheft By 4 Bit */
-		SYSCFG_EXTICR1| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR1 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
 	}
 	/* For Port From 3 To 7 We Have SYSCFG_EXTICR2	*/
 	else if(Copy_u8LineNum <= 7)
 	{
 		/* Make The Place =0000 -----> Safty*/
-		SYSCFG_EXTICR2& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR2 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
 		/* Map (4,5,6,7) To (0,1,2,3)*/
 		Copy_u8LineNum -=4 ; 
-		SYSCFG_EXTICR2| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR2 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
 		
 	}
 	/* For Port From 7 To 11 We Have SYSCFG_EXTICR3	*/
 	else if(Copy_u8LineNum <= 11)
 	{
 		/* Make The Place =0000 -----> Safty*/
-		SYSCFG_EXTICR3& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR3 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
 		/* Map (8,9,10,11) To (0,1,2,3)*/
 		Copy_u8LineNum -= 8 ;
-		SYSCFG_EXTICR3| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR3 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
 	}
 	/* For Port From 11 To 15 We Have SYSCFG_EXTICR4	*/
 	else if(Copy_u8LineNum <= 15)
 	{
 		/* Make The Place =0000 -----> Safty*/
-		SYSCFG_EXTICR4& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR4 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
 		/* Map (12,13,14,15) To (0,1,2,3)*/
 		Copy_u8LineNum -= 12 ;
-		SYSCFG_EXTICR4| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+		SYSCFG_EXTICR4 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
 	}
 }
 

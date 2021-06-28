@@ -87,4 +87,3 @@
 	  #define  APB1_BUS				 	   3
 	  #define  APB2_BUS				 	   4
 #endif //RCC_INTERFACE_H
-

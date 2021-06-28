@@ -31,48 +31,50 @@ EXI_program.c(24): warning: In file included from...
 ./EXI_interface.h(50): warning: no newline at end of file [-Wnewline-eof]
 #endif //EXI_INTERFACE_H
                         ^
-EXI_program.c(114): error: expected expression
-                SYSCFG_EXTICR1& =~ (0b1111<<(4*Copy_u8LineNum )) ;
-                                ^
 EXI_program.c(114): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-                SYSCFG_EXTICR1& =~ (0b1111<<(4*Copy_u8LineNum )) ;
-                                    ^
-EXI_program.c(116): error: expected expression
-                SYSCFG_EXTICR1| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
-                                ^
-EXI_program.c(122): error: expected expression
-                SYSCFG_EXTICR2& =~ (0b1111<<(4*Copy_u8LineNum )) ;
-                                ^
+                SYSCFG_EXTICR1 &=~(0b1111<<(4*Copy_u8LineNum )) ;
+                                   ^
+EXI_program.c(114): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR1 &=~(0b1111<<(4*Copy_u8LineNum )) ;
+                               ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXI_program.c(116): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR1 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+                               ~~  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
 EXI_program.c(122): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-                SYSCFG_EXTICR2& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+                SYSCFG_EXTICR2 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
                                     ^
-EXI_program.c(125): error: expected expression
-                SYSCFG_EXTICR2| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
-                                ^
-EXI_program.c(132): error: expected expression
-                SYSCFG_EXTICR3& =~ (0b1111<<(4*Copy_u8LineNum )) ;
-                                ^
+EXI_program.c(122): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR2 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
+                               ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXI_program.c(125): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR2 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+                               ~~  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
 EXI_program.c(132): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-                SYSCFG_EXTICR3& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+                SYSCFG_EXTICR3 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
                                     ^
-EXI_program.c(135): error: expected expression
-                SYSCFG_EXTICR3| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
-                                ^
-EXI_program.c(141): error: expected expression
-                SYSCFG_EXTICR4& =~ (0b1111<<(4*Copy_u8LineNum )) ;
-                                ^
+EXI_program.c(132): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR3 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
+                               ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXI_program.c(135): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR3 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+                               ~~  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
 EXI_program.c(141): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-                SYSCFG_EXTICR4& =~ (0b1111<<(4*Copy_u8LineNum )) ;
+                SYSCFG_EXTICR4 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
                                     ^
-EXI_program.c(144): error: expected expression
-                SYSCFG_EXTICR4| = (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
-                                ^
+EXI_program.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR4 &=~ (0b1111<<(4*Copy_u8LineNum )) ;
+                               ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXI_program.c(144): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                SYSCFG_EXTICR4 |= (Copy_u8PortID <<(4*Copy_u8LineNum )) ;
+                               ~~  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
 EXI_program.c(167): warning: no newline at end of file [-Wnewline-eof]
 /*********************************************************** END_ FUNCTION   *********************************************************/
                                                                                                                                        ^
-6 warnings and 8 errors generated.
+14 warnings generated.
 compiling EXI_program.c...
-".\Objects\M_EXI.axf" - 8 Error(s), 6 Warning(s).
+linking...
+Program Size: Code=380 RO-data=444 RW-data=0 ZI-data=1632  
+".\Objects\M_EXI.axf" - 0 Error(s), 14 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -98,13 +100,12 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Target not created.
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

@@ -57,8 +57,6 @@
 	#define			 RCC_CSR				*((u32 *)0x40023874)
 	#define			 RCC_SSCGR				*((u32 *)0x40023880)
 	#define			 RCC_PLLI2SCFGR			*((u32 *)0x40023884)
-
+	#define
 	
 	#endif //RCC_PRIVATE_H
-	
-	

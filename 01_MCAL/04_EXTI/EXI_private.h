@@ -31,7 +31,8 @@
 	-----> Macros
 			*  Base_Address EXTI				
 ************************************************************************************/
-#define EXTI_Base_Address										0x40013C00		
+#define EXTI_Base_Address										0x40013C00
+#define SYSCFG_Base_Address				       	  0x40013800
 /***********************************************************************************
 	-----> Macros
 			  *  Register Map
@@ -43,25 +44,26 @@
 *  Register Map :SYSCFG
 * 	-------> To choice Pin From Line
 ************************************************************************************/
-#define  SYSCFG_Base_Address									0x40013800
-#define	 SYSCFG_EXTICR1							 (*((volatile u32 *) ( SYSCFG_Base_Address + 0x08)))
-#define	 SYSCFG_EXTICR2							 (*((volatile u32 *) ( SYSCFG_Base_Address + 0x0C)))
-#define	 SYSCFG_EXTICR3							 (*((volatile u32 *) ( SYSCFG_Base_Address + 0x10)))
-#define	 SYSCFG_EXTICR4							 (*((volatile u32 *) ( SYSCFG_Base_Address + 0x14)))
+
+
+#define SYSCFG_EXTICR1							 (*((volatile u32*) (SYSCFG_Base_Address+0x08)))	
+#define SYSCFG_EXTICR2							 (*((volatile u32*) (SYSCFG_Base_Address+0x0C)))
+#define SYSCFG_EXTICR3							 (*((volatile u32*) (SYSCFG_Base_Address+0x10)))
+#define SYSCFG_EXTICR4							 (*((volatile u32*) (SYSCFG_Base_Address+0x14)))
 
 /***********************************************************************************
 -----> Macros
 *  Register Map
 * EMR-------> Not Use  
 ************************************************************************************/
-#define EXTI_EMR								(*((volatile u32 *) ( EXTI_Base_Address + 0x04)))
+#define EXTI_EMR								(*((volatile u32*) ( EXTI_Base_Address + 0x04)))
 /***********************************************************************************
 -----> Macros
 *  Register Map
 * -------> To Make Trigger At Rise Or Fall
 ************************************************************************************/				
-#define EXTI_RTSR								(*((volatile u32 *) ( EXTI_Base_Address + 0x08)))
-#define EXTI_FTSR								(*((volatile u32 *) ( EXTI_Base_Address + 0x0C)))
+#define EXTI_RTSR								(*((volatile u32*) ( EXTI_Base_Address + 0x08)))
+#define EXTI_FTSR								(*((volatile u32*) ( EXTI_Base_Address + 0x0C)))
 /***********************************************************************************
 -----> Macros
 *  Register Map
