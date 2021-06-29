@@ -1,0 +1,506 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abdelrahman Magdy, Value, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  E:\Keil_Packs\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\06_SPI\SPI.uvprojx
+Project File Date:  06/29/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling main.c...
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
+SPI_program.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1, MSTR);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(87): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1,CPOL);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(95): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1,CPHA);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(106): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1,DFF);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(117): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1,LSBFIRST);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(129): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1,SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(138): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1, SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(150): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI1_CR1,BIDIMODE);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(157): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        SPI1_CR1|=(Copy_u8BaudRate<<3U);
+                                ~~ ~~~~~~~~~~~~~~~^~~~
+SPI_program.c(181): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1, MSTR);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(193): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1,CPOL);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(201): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1,CPHA);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(212): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1,DFF);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(223): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1,LSBFIRST);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(235): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1,SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(244): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1, SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(256): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI2_CR1,BIDIMODE);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(263): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        SPI2_CR1|=(Copy_u8BaudRate<<3U);
+                                ~~ ~~~~~~~~~~~~~~~^~~~
+SPI_program.c(285): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1, MSTR);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(297): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1,CPOL);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(305): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1,CPHA);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(316): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1,DFF);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(327): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1,LSBFIRST);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(339): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1,SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(348): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1, SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(360): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI3_CR1,BIDIMODE);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(367): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        SPI3_CR1|=(Copy_u8BaudRate<<3U);
+                                ~~ ~~~~~~~~~~~~~~~^~~~
+SPI_program.c(388): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1, MSTR);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(400): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1,CPOL);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(408): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1,CPHA);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(419): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1,DFF);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(430): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1,LSBFIRST);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(442): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1,SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(451): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1, SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(463): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI4_CR1,BIDIMODE);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(470): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        SPI4_CR1|=(Copy_u8BaudRate<<3U);
+                                ~~ ~~~~~~~~~~~~~~~^~~~
+SPI_program.c(491): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1, MSTR);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(503): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1,CPOL);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(511): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1,CPHA);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(522): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1,DFF);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(533): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1,LSBFIRST);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(545): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1,SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(554): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1, SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(566): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI5_CR1,BIDIMODE);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(573): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        SPI5_CR1|=(Copy_u8BaudRate<<3U);
+                                ~~ ~~~~~~~~~~~~~~~^~~~
+SPI_program.c(594): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1, MSTR);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(606): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1,CPOL);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(614): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1,CPHA);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(625): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1,DFF);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(636): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1,LSBFIRST);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(648): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1,SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(657): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1, SSM);
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(669): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(SPI6_CR1,BIDIMODE);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(676): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        SPI6_CR1|=(Copy_u8BaudRate<<3U);
+                                ~~ ~~~~~~~~~~~~~~~^~~~
+SPI_program.c(707): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(SPI1_CR1,SPE);
+                ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(712): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(SPI2_CR1,SPE);
+                ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(717): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(SPI3_CR1,SPE);
+                ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(722): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(SPI4_CR1,SPE);
+                ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(727): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(SPI5_CR1,SPE);
+                ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(732): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLR_BIT(SPI6_CR1,SPE);
+                ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+SPI_program.c(760): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return(SPI1_DR);
+        ~~~~~~ ^~~~~~~
+./SPI_private.h(55): note: expanded from macro 'SPI1_DR'
+#define SPI1_DR                                                    (*((volatile u32*) (SPI1_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(773): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return(SPI2_DR);
+        ~~~~~~ ^~~~~~~
+./SPI_private.h(71): note: expanded from macro 'SPI2_DR'
+#define SPI2_DR                                                    (*((volatile u32*) (SPI2_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(786): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return(SPI3_DR);
+        ~~~~~~ ^~~~~~~
+./SPI_private.h(87): note: expanded from macro 'SPI3_DR'
+#define SPI3_DR                                                    (*((volatile u32*) (SPI3_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(799): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return(SPI4_DR);
+        ~~~~~~ ^~~~~~~
+./SPI_private.h(104): note: expanded from macro 'SPI4_DR'
+#define SPI4_DR                                                    (*((volatile u32*) (SPI4_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(812): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return(SPI5_DR);
+        ~~~~~~ ^~~~~~~
+./SPI_private.h(120): note: expanded from macro 'SPI5_DR'
+#define SPI5_DR                                                    (*((volatile u32*) (SPI5_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(825): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return(SPI6_DR);
+        ~~~~~~ ^~~~~~~
+./SPI_private.h(136): note: expanded from macro 'SPI6_DR'
+#define SPI6_DR                                                    (*((volatile u32*) (SPI6_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(832): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+SPI_program.c(826): warning: 'break' will never be executed [-Wunreachable-code-break]
+        break ;
+        ^~~~~
+SPI_program.c(813): warning: 'break' will never be executed [-Wunreachable-code-break]
+        break ;
+        ^~~~~
+SPI_program.c(800): warning: 'break' will never be executed [-Wunreachable-code-break]
+        break ;
+        ^~~~~
+SPI_program.c(787): warning: 'break' will never be executed [-Wunreachable-code-break]
+        break ;
+        ^~~~~
+SPI_program.c(774): warning: 'break' will never be executed [-Wunreachable-code-break]
+        break ;
+        ^~~~~
+SPI_program.c(761): warning: 'break' will never be executed [-Wunreachable-code-break]
+        break ;
+        ^~~~~
+SPI_program.c(862): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        Copy_u8DataIn[Local_u8Index]=SPI1_DR;
+                                                    ~^~~~~~~
+./SPI_private.h(55): note: expanded from macro 'SPI1_DR'
+#define SPI1_DR                                                    (*((volatile u32*) (SPI1_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(878): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        Copy_u8DataIn[Local_u8Index]=SPI2_DR;
+                                                    ~^~~~~~~
+./SPI_private.h(71): note: expanded from macro 'SPI2_DR'
+#define SPI2_DR                                                    (*((volatile u32*) (SPI2_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(894): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        Copy_u8DataIn[Local_u8Index]=SPI3_DR;
+                                                    ~^~~~~~~
+./SPI_private.h(87): note: expanded from macro 'SPI3_DR'
+#define SPI3_DR                                                    (*((volatile u32*) (SPI3_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(910): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        Copy_u8DataIn[Local_u8Index]=SPI4_DR;
+                                                    ~^~~~~~~
+./SPI_private.h(104): note: expanded from macro 'SPI4_DR'
+#define SPI4_DR                                                    (*((volatile u32*) (SPI4_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(926): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        Copy_u8DataIn[Local_u8Index]=SPI5_DR;
+                                                    ~^~~~~~~
+./SPI_private.h(120): note: expanded from macro 'SPI5_DR'
+#define SPI5_DR                                                    (*((volatile u32*) (SPI5_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI_program.c(942): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned long') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        Copy_u8DataIn[Local_u8Index]=SPI6_DR;
+                                                    ~^~~~~~~
+./SPI_private.h(136): note: expanded from macro 'SPI6_DR'
+#define SPI6_DR                                                    (*((volatile u32*) (SPI6_Base_Address+0x0C)))        
+                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+79 warnings generated.
+compiling SPI_program.c...
+linking...
+Program Size: Code=380 RO-data=444 RW-data=0 ZI-data=1632  
+".\Objects\SPI.axf" - 0 Error(s), 79 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  E:\Keil_Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  E:\Keil_Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
