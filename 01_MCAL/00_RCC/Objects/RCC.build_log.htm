@@ -1,0 +1,314 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abdelrahman Magdy, Value, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  E:\Keil_Packs\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\00_RCC\RCC.uvprojx
+Project File Date:  07/07/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling main.c...
+assembling startup_stm32f429xx.s...
+RCC_program.c(59): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CR   , 18) ;                // Disable Byp
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(61): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 1 ) ;                // System Clk  HSE
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(68): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 1 ) ;                                // System Clk  HSE
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(71): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default         :  
+                                        ^
+RCC_program.c(81): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 0   ) ;                                       // System Clk  HSI
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 1   ) ;                                       // System Clk  HSI
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(94): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                         CLR_BIT(RCC_CFGR , 0 ) ;                                       // System Clk  PLL
+                                                         ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(101): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                         CLR_BIT(RCC_PLLCFGR ,22) ;                                       //  PLL From HSI
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                         CLR_BIT(RCC_CFGR , 0 )   ;                                       // System Clk  PLL
+                                                         ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(107): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                         default : 
+                                         ^
+RCC_program.c(114): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default         :  break;
+                        ^
+RCC_program.c(129): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 10) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(130): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 11) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(131): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR, 12) ;
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(134): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 10) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(135): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 11) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 11) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(144): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 10) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(153): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default: break;
+                ^
+RCC_program.c(170): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 13) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(171): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 14) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(172): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 15) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 13) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(176): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 14) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(181): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 14) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(185): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 13) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(195): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default: break;
+                        ^
+RCC_program.c(218): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(219): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(221): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 7 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(225): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(226): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(227): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(233): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(234): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(239): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(248): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(253): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(254): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(260): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) REG&=~(1<<BITNUM)
+                                  ~~^~~~~~~~~~~~
+RCC_program.c(215): warning: enumeration values 'AHB_Pre32' and 'AHB_Pre256' not explicitly handled in switch [-Wswitch-enum]
+                        switch (AHB_Prescaler)
+                                ^
+RCC_program.c(312): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                 default :
+                 ^
+44 warnings generated.
+compiling RCC_program.c...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=380 RO-data=444 RW-data=0 ZI-data=1632  
+".\Objects\RCC.axf" - 0 Error(s), 44 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  E:\Keil_Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  E:\Keil_Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

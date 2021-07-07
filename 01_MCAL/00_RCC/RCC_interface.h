@@ -1,5 +1,5 @@
 /***************************************************************************************
- *************************** - RCC_interface.h				 ***************************
+ ***************************  - RCC_interface.h				 ***************************
 ***************************   -Created: 5/5/2021			 ***************************
 ***************************   -Author: Abdelrahman_Magdy     ***************************
 ***************************   -Version : _1_				 ***************************
@@ -31,15 +31,41 @@
 
 #include "RCC_config.h"
 #include "STD_TYPE.h"
+/*
+	- Frist You Must Know The Perpheral On Which Bus
+	- 
+
+*/
 	/*
-		-Function To Set System CLK
+	-Function To Set System CLK From Enum Type Send :
+																				* ClkSrcName_t 		: RCC_HSE  RCC_HSI	RCC_PLL	
+																				* HSESrcName_t 		: Crystal CLK From (HSE_Crystal , HSE_RC )
+																				* AHBPreName_t    : AHB  Prescaller ( 1 : 512 )
+																				* APB1PreName_t   : APB1 Prescaller ( 1 : 16  )  
+																				* APB2PreName_t   : APB2_Prescaller ( 1 : 16  ) 
+																				*( M N P Q )      : By #define 
+																									
+																
 	*/
 	 void MRCC_voidInitSysClock( ClkSrcName_t ClkSrc , HSESrcName_t HSESrc , PllSrcName_t PLLSrc  , AHBPreName_t AHB_Prescaler , APB1PreName_t APB1_Prescaler  , APB2PreName_t APB2_Prescaler ) ;
 	
 	/*
-	  - Function To Enable Prepheral of  Reg
+	- Function To Enable Prepheral :
+																	- BusName_t      :  The Bus Of The Prepheral ( AHB1 , AHB2 , AHB3 , APB1 , APB2 ) Every One Detect Which REG To Choice Pripheral From It
+																	- Copy_u8PerName :  The Order Of Prepheral On The Selected Reg 
+	
 	*/
-	 void MRCC_voidEnableClock (BusName_t BusName ,u8 Copy_u8PerName  ); 
+	 void MRCC_voidEnableClock (BusName_t BusName ,u8 Copy_u8PerName  );
+	/*
+	- Function To Disable Prepheral :
+																	- BusName_t      :  The Bus Of The Prepheral ( AHB1 , AHB2 , AHB3 , APB1 , APB2 ) Every One Detect Which REG To Choice Pripheral From It
+																	- Copy_u8PerName :  The Order Of Prepheral On The Selected Reg 
+	
+	*/
+	 void MRCC_voidDisableClock (BusName_t BusName ,u8 Copy_u8PerName  );
+	 
+	 
+	 
 	 
 	 // CLK Sourse
 	 #define  HSE_CLK			   		   0
