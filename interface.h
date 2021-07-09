@@ -1,36 +1,36 @@
-			/*
+/**************************************************************************************************************************************************************************************************************************/	
+		/*
 				* RCC_interface.h
 				* Created: 5/5/2021
 				* Author: Abdelrahman_Magdy
 
-			*/
+		*/
 
 	/*
 	
 	- Frist You Must Know The Perpheral On Which Bus
 	- Function To Set System CLK From Enum Type Send :
-													* ClkSrcName_t 		: RCC_HSE  RCC_HSI	RCC_PLL	
-													* HSESrcName_t 		: Crystal CLK From (HSE_Crystal , HSE_RC )
-													* AHBPreName_t    : AHB  Prescaller ( 1 : 512 )
-													* APB1PreName_t   : APB1 Prescaller ( 1 : 16  )  
-													* APB2PreName_t   : APB2_Prescaller ( 1 : 16  ) 
-													*( M N P Q )      : By #define 
+							* ClkSrcName_t 		: RCC_HSE  RCC_HSI	RCC_PLL	
+							* HSESrcName_t 		: Crystal CLK From (HSE_Crystal , HSE_RC )
+							* AHBPreName_t    : AHB  Prescaller ( 1 : 512 )
+							* APB1PreName_t   : APB1 Prescaller ( 1 : 16  )  
+							* APB2PreName_t   : APB2_Prescaller ( 1 : 16  ) 
+							*( M N P Q )      : By #define 
 																									
-																
 	*/
 	 void MRCC_voidInitSysClock( ClkSrcName_t ClkSrc , HSESrcName_t HSESrc , PllSrcName_t PLLSrc  , AHBPreName_t AHB_Prescaler , APB1PreName_t APB1_Prescaler  , APB2PreName_t APB2_Prescaler ) ;
 	
 	/*
 	- Function To Enable Prepheral :
-									- BusName_t      :  The Bus Of The Prepheral ( AHB1 , AHB2 , AHB3 , APB1 , APB2 ) Every One Detect Which REG To Choice Pripheral From It
-									- Copy_u8PerName :  The Order Of Prepheral On The Selected Reg 
+					- BusName_t      :  The Bus Of The Prepheral ( AHB1 , AHB2 , AHB3 , APB1 , APB2 ) Every One Detect Which REG To Choice Pripheral From It
+					- Copy_u8PerName :  The Order Of Prepheral On The Selected Reg 
 	
 	*/
 	 void MRCC_voidEnableClock (BusName_t BusName ,u8 Copy_u8PerName  );
 	/*
 	- Function To Disable Prepheral :
-									- BusName_t      :  The Bus Of The Prepheral ( AHB1 , AHB2 , AHB3 , APB1 , APB2 ) Every One Detect Which REG To Choice Pripheral From It
-									- Copy_u8PerName :  The Order Of Prepheral On The Selected Reg 
+					- BusName_t      :  The Bus Of The Prepheral ( AHB1 , AHB2 , AHB3 , APB1 , APB2 ) Every One Detect Which REG To Choice Pripheral From It
+					- Copy_u8PerName :  The Order Of Prepheral On The Selected Reg 
 	
 	*/
 	 void MRCC_voidDisableClock (BusName_t BusName ,u8 Copy_u8PerName  );
@@ -38,48 +38,51 @@
 
 /**************************************************************************************************************************************************************************************************************************/
 
-		/*
-			SPI _interface.h			
-			Created: 6/28/2021		
-			Author: Abdelrahman_Magdy
-
-		*/
-
-/*			Function Take The Number OF SPI(SPIX) & X {0,1,...,6} & Iniate It				 */
-void MSPI_voidInit(u8 Copy_u8SPINumber ,u8 Copy_u8DeviceMode ,u8 Copy_u8ClockPolarity ,u8 Copy_u8ClockPhase ,u8 Copy_u8DataSize ,u8 Copy_u8DataDir , u8 Copy_u8NssMode,u8 Copy_u8BaudRate ,u8 Copy_u8BiDirMode) ;
-/*			Function Take The Number OF SPI(SPIX) & X {0,1,...,6} & Disable It				 */
-void MSPI_voidDisable(u8 Copy_u8SPINumber) ;
-/*			Function Take Number Of SPI & 8_Bit Data To Write Them At DR_REG & Recive Data Can Be Dumy Or Usefull*/
-u8 MSPI_u8Write8itData(u8 Copy_u8SPINumber , u8 Copy_u8DataOut);
-/*			Function Take Number Of SPI & Write Array Of 8_Bit Data Send Meny Data After It Self  Loop By Data Count Index */
-void MSPI_voidWriteMulti8BitData(u8 Copy_u8SPINumber , u8* Copy_u8DataOut , u8* Copy_u8DataIn , u8 Copy_u8Count   );
-/*			Function Take Number Of SPI & Write Array Of 16_Bit Data Send Meny Data After It Self  Loop By Data Count Index */
-void MSPI_voidWriteMulti16BitData(u8 Copy_u8SPINumber , u16* Copy_u8DataOut , u16* Copy_u8DataIn , u8 Copy_u8Count   );
-
-
-/**************************************************************************************************************************************************************************************************************************/
- 
 				 /*
 						- GPIO_interface.h
 						- Created: 5/16/2021
 						- Author: Abdelrahman_Magdy
 				 */
-	/*		Function Set The Mode Of Pin	*/
+	/*
+		-The Functionality Of Pinss : 
+		
+					- Input		: (Defult= PullUp | PullDowen | Floating ---> When To Use ????? )  .
+					- Floating	: (Not Connect High Or Low Between (0:1) ) When Used ---> With Sensor To Be Sensetive For Zero And 1 And Between  .
+					- Pull_Up&Dowen ( To Treat The Floating On The Pin To Read Only ( 1 | 0 ) Nothing In Between ) .
+					- OutPut    : Can Be (PushPull | OpenDrain ) .
+					- PushPull  : The OutPut From This Case High=1 | LOW = 0  .
+					- OpenDrain : The OutPut From This Case At( Pull_Up & PullDowen )  .
+										- At Pull_UP   0 == Ground & 1 == Floating .
+										- The Advantage Of This Case When You Make OutPut Pin out Floating you Can Connect Vcc From Out Not Micro So Any Volt You Need Connect It Direct And Any Current ( Configrable - High Level Volt) .
+										- Must Connect Resistance For The Case Of Zero Not Make Short Circuit At  ( Configrable - High Level Volt) .
+										- Open Drain Bus Not Make Short Circuit Between Two Micro At The Same Bus When One Send 1 And Oher Send 0 .
+										- At PullDowen 1 == Vcc & 0 == Floating  -----> So Will give Output Only In This Case  .
+										
+					- Altternative Function : Every Pin Can Make 16 Function Anther (InPut , OutPut , Analog)  As ( Uart , Spi , Can , Timer , ADC , I2C , ........)        Every Pin Need 4 Bit 
+					- ALF : From GPIO Choice Bit AS ALF But The Function From -----> ????????
+					
+	
+	
+	
+	*/
+	/*		Function Set The Mode Of Pin ( InPut , OutPut , Alternate Function , Analog )	*/
 void MGOIP_voidSetPinMode(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8MODE)  ;
 /*		Function Set The Type Of OutPut (OpenDrain = 0 , PushPull = 1)		*/
 void MGPIO_voidSetOutType(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Type)  ;
-/*		Function Set The Speed (LOW , Meduim , High ,VeryHaigh		*/
+/*		Function Set The Speed (LOW , Meduim , High ,VeryHaigh	) Control Speed Good For Power Consumtion 	*/
 void MGPIO_voidSetOutSpeed(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Speed)  ;
 /*		Function Set The PULL ( OFF , UP , DOWN )		*/
 void MGPIO_voidSetPull(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8PULL_TYPE)  ;
-/*		Function To Read Data From IDR		*/
+/*		Function To Read Data From IDR At Inpiut Mode 		*/
 u8 MGPIO_u8ReadData(u8 copy_u8PORT ,u8 copy_u8PIN)  ;
-/*		Function To Write Data At ODR	Value = high , low	*/
+/*		Function To Write Data At ODRValue = high , low At OutPot Mode 	*/
 void MGPIO_voidWriteDataOdr(u8 copy_u8PORT ,u8 copy_u8PIN , u8 copy_u8Value )  ;
 /*		Function To Lock Pin	*/
 void MGPIO_voidPinLock(u8 copy_u8PORT ,u8 copy_u8PIN )  ;
-/*		Function Set The AltFn								*/
+/*		Function Set The Altternative Function	Every Pin Can Make 16 Function Anther (InPut , OutPut , Analog) */
 void MGOIP_voidPinSetAltFn(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8AlT)  ;
+
+
 /**************************************************************************************************************************************************************************************************************************/
 /*
 			 DMA_interface.h
@@ -152,6 +155,8 @@ void MEXTI_voidSelectPort(  u8 Copy_u8LineNum  , u8 Copy_u8PortID  ) ;
 				-Created: 6/28/2021
 				-Author: Abdelrahman_Magdy
 			*/
+			
+			
 /*			Function Take The Number OF SPI(SPIX) & X {0,1,...,6} & Iniate It				 */
 void MSPI_voidInit(u8 Copy_u8SPINumber ,u8 Copy_u8DeviceMode ,u8 Copy_u8ClockPolarity ,u8 Copy_u8ClockPhase ,u8 Copy_u8DataSize ,u8 Copy_u8DataDir , u8 Copy_u8NssMode,u8 Copy_u8BaudRate ,u8 Copy_u8BiDirMode) ;
 /*			Function Take The Number OF SPI(SPIX) & X {0,1,...,6} & Disable It				 */

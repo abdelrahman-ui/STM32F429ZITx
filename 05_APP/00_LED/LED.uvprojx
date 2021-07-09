@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>GPIO</OutputName>
+          <OutputName>LED</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -381,32 +381,17 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>SRC</GroupName>
+          <GroupName>scr</GroupName>
           <Files>
             <File>
-              <FileName>GPIO_program.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\GPIO_program.c</FilePath>
-            </File>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>RCC_program.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\00_RCC\RCC_program.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>INC</GroupName>
-          <Files>
-            <File>
-              <FileName>GPIO_private.h</FileName>
+              <FileName>BIT_MATH.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\GPIO_private.h</FilePath>
+              <FilePath>.\BIT_MATH.h</FilePath>
+            </File>
+            <File>
+              <FileName>STD_TYPE.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\STD_TYPE.h</FilePath>
             </File>
             <File>
               <FileName>GPIO_config.h</FileName>
@@ -419,29 +404,44 @@
               <FilePath>.\GPIO_interface.h</FilePath>
             </File>
             <File>
-              <FileName>STD_TYPE.h</FileName>
+              <FileName>GPIO_private.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\STD_TYPE.h</FilePath>
-            </File>
-            <File>
-              <FileName>BIT_MATH.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\BIT_MATH.h</FilePath>
-            </File>
-            <File>
-              <FileName>RCC_private.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\00_RCC\RCC_private.h</FilePath>
-            </File>
-            <File>
-              <FileName>RCC_interface.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\00_RCC\RCC_interface.h</FilePath>
+              <FilePath>.\GPIO_private.h</FilePath>
             </File>
             <File>
               <FileName>RCC_config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\00_RCC\RCC_config.h</FilePath>
+              <FilePath>.\RCC_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RCC_interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RCC_private.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>src</GroupName>
+          <Files>
+            <File>
+              <FileName>RCC_program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RCC_program.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\GPIO_program.c</FilePath>
             </File>
           </Files>
         </Group>

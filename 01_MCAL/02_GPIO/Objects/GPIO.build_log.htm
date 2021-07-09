@@ -22,28 +22,170 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\02_GPIO\GPIO.uvprojx
-Project File Date:  05/21/2021
+Project File Date:  07/08/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
-Build target 'Target 1'
-main.c(25): warning: In file included from...
+Rebuild target 'Target 1'
+compiling main.c...
+compiling system_stm32f4xx.c...
+assembling startup_stm32f429xx.s...
+GPIO_program.c(25): warning: In file included from...
 ./GPIO_config.h(37): warning: no newline at end of file [-Wnewline-eof]
 #endif /* GPIO_CONFIG_H_ */
                            ^
-main.c(51): error: expected expression
-        RCC_AHB1ENR =(1U<<6);
-        ^
-main.c(41): note: expanded from macro 'RCC_AHB1ENR'
-#define RCC_AHB1ENR                                     (*((uint32*)0x40023830))
-                                                                   ^
-main.c(51): error: use of undeclared identifier 'uint32'
-main.c(41): note: expanded from macro 'RCC_AHB1ENR'
-#define RCC_AHB1ENR                                     (*((uint32*)0x40023830))
-                                                            ^
-1 warning and 2 errors generated.
-compiling main.c...
-".\Objects\GPIO.axf" - 2 Error(s), 1 Warning(s).
+GPIO_program.c(58): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                          GPIOA_MODER |= (copy_u8MODE << (2*copy_u8PIN));
+                                                      ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(63): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOB_MODER |= (copy_u8MODE << (2*copy_u8PIN));
+                                                     ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(67): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOC_MODER |= (copy_u8MODE << (2*copy_u8PIN));
+                                                     ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(71): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOD_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOE_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(79): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOF_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(83): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOG_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(87): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOH_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(111): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOA_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                        ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(116): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOB_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(120): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOC_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(124): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOD_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(128): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOE_OTYPER|= (copy_u8Type<< (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(132): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOF_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(136): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOG_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                        ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOH_OTYPER|= (copy_u8Type<< (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(166): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOA_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                         ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(171): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOB_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                              ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOC_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(179): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOD_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(183): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOE_OSPEEDR|= (copy_u8Speed<< (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(187): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOF_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                              ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(191): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOG_OSPEEDR|= (copy_u8Speed<< (2*copy_u8PIN));
+                                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(195): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOH_OSPEEDR|= (copy_u8Speed<< (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOA_PUPDR|= (copy_u8PULL_TYPE << (2*copy_u8PIN));
+                                                       ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(225): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOB_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(229): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOC_PUPDR|= (copy_u8PULL_TYPE << (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(233): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOD_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(237): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOE_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOF_PUPDR|= (copy_u8PULL_TYPE << (2*copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(245): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOG_PUPDR|= (copy_u8PULL_TYPE <<(2*copy_u8PIN));
+                                                       ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+GPIO_program.c(249): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOH_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(451): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOA_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(455): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOB_AFRL|= (copy_u8AlT<< (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(459): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOC_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(463): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOD_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(467): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOE_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(471): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOF_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(475): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOG_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(479): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOH_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(492): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOA_AFRH|= (copy_u8AlT << (4U*(copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(496): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOB_AFRH|= (copy_u8AlT<< ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(500): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOC_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(504): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOD_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(508): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOE_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(512): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOF_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(516): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOG_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(520): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOH_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(527): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+50 warnings generated.
+compiling GPIO_program.c...
+linking...
+Program Size: Code=380 RO-data=444 RW-data=0 ZI-data=1632  
+".\Objects\GPIO.axf" - 0 Error(s), 50 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -69,13 +211,12 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
