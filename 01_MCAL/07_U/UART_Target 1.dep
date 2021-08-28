@@ -1,0 +1,32 @@
+Dependencies for Project 'UART', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\BIT_MATH.h)(0x60DA759F)()
+F (.\GPIO_interface.h)(0x60E92673)()
+F (.\GPIO_private.h)(0x60E62720)()
+F (.\RCC_config.h)(0x60E92674)()
+F (.\RCC_interface.h)(0x60E92674)()
+F (.\RCC_private.h)(0x60E52021)()
+F (.\STD_TYPES.h)(0x6093F9FE)()
+F (.\UART_config.h)(0x60E92673)()
+F (.\UART_interface.h)(0x60E92673)()
+F (.\UART_private.h)(0x60E91607)()
+F (.\core_cm4.h)(0x5E2A8D76)()
+F (.\system_stm32f4xx.h)(0x60E92665)()
+F (.\UART_program.c)(0x60E92673)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IE:/Keil_Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="534" -DSTM32F429xx-o ./uart_program.o -MD)
+I (STD_TYPES.h)(0x6093F9FE)
+I (BIT_MATH.h)(0x60DA759F)
+I (UART_private.h)(0x60E91607)
+I (UART_interface.h)(0x60E92673)
+I (UART_config.h)(0x60E92673)
+F (.\RCC_program.c)(0x60E91758)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IE:/Keil_Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="534" -DSTM32F429xx-o ./rcc_program.o -MD)
+I (STD_TYPES.h)(0x6093F9FE)
+I (BIT_MATH.h)(0x60DA759F)
+I (RCC_private.h)(0x60E52021)
+I (RCC_interface.h)(0x60E92674)
+I (RCC_config.h)(0x60E92674)
+F (.\GPIO_program.c)(0x60E91758)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IE:/Keil_Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="534" -DSTM32F429xx-o ./gpio_program.o -MD)
+I (STD_TYPES.h)(0x6093F9FE)
+I (BIT_MATH.h)(0x60DA759F)
+I (GPIO_private.h)(0x60E62720)
+I (GPIO_interface.h)(0x60E92673)
+F (.\main.c)(0x60E92673)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IE:/Keil_Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="534" -DSTM32F429xx-o ./main.o -MD)

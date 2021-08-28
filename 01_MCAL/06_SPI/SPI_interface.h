@@ -12,11 +12,11 @@
 
 /*************************************************************************************
 		* What i sell To Customer
-		*  The Archictect Give The API	
-						- The Name Of Function 
-						- What is The Input 
-						- What Is The Output
-						- Macro 
+				*  The Archictect Give The API	
+							- The Name Of Function 
+							- What is The Input 
+							- What Is The Output
+							- Macro 
 						 
 *************************************************************************************/ 
 

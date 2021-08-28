@@ -1,0 +1,448 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abdelrahman Magdy, Value, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  E:\Keil_Packs\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\07_UART\UART.uvprojx
+Project File Date:  07/10/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'E:\Keil_Packs\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling UART_program.c...
+main.c(2): warning: In file included from...
+E:/Keil_Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f429xx.h(174): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+1 error generated.
+compiling main.c...
+RCC_program.c(59): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CR   , 18) ;                // Disable Byp
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(61): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 1 ) ;                // System Clk  HSE
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(68): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 1 ) ;                                // System Clk  HSE
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(71): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default         :  
+                                        ^
+RCC_program.c(81): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 0   ) ;                                       // System Clk  HSI
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 1   ) ;                                       // System Clk  HSI
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(94): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                         CLR_BIT(RCC_CFGR , 0 ) ;                                       // System Clk  PLL
+                                                         ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(101): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                         CLR_BIT(RCC_PLLCFGR ,22) ;                                       //  PLL From HSI
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                         CLR_BIT(RCC_CFGR , 0 )   ;                                       // System Clk  PLL
+                                                         ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(107): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                         default : 
+                                         ^
+RCC_program.c(114): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default         :  break;
+                        ^
+RCC_program.c(129): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 10) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(130): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 11) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(131): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR, 12) ;
+                        ^~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(134): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 10) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(135): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 11) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 11) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(144): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        CLR_BIT(RCC_CFGR , 10) ;
+                        ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(153): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default: break;
+                ^
+RCC_program.c(170): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 13) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(171): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 14) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(172): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 15) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 13) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(176): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 14) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(181): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 14) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(185): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                CLR_BIT(RCC_CFGR , 13) ;
+                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(195): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default: break;
+                        ^
+RCC_program.c(218): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(219): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(221): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 7 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(225): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(226): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(227): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(233): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(234): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(239): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(248): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 6 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(253): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(254): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 5 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(260): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                CLR_BIT(RCC_CFGR , 4 ) ;
+                                                ^~~~~~~~~~~~~~~~~~~~~~
+./BIT_MATH.h(16): note: expanded from macro 'CLR_BIT'
+ #define CLR_BIT(REG , BITNUM) (REG &= ~(1<<BITNUM))
+                                    ~~ ^~~~~~~~~~~~
+RCC_program.c(215): warning: enumeration values 'AHB_Pre32' and 'AHB_Pre256' not explicitly handled in switch [-Wswitch-enum]
+                        switch (AHB_Prescaler)
+                                ^
+RCC_program.c(312): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                 default :
+                 ^
+44 warnings generated.
+compiling RCC_program.c...
+GPIO_program.c(58): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                          GPIOA_MODER |= (copy_u8MODE << (2*copy_u8PIN));
+                                                      ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(63): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOB_MODER |= (copy_u8MODE << (2*copy_u8PIN));
+                                                     ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(67): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOC_MODER |= (copy_u8MODE << (2*copy_u8PIN));
+                                                     ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(71): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOD_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOE_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(79): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOF_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(83): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOG_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(87): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                         GPIOH_MODER|= (copy_u8MODE << (2*copy_u8PIN));
+                                                    ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(111): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOA_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                        ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(116): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOB_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(120): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOC_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(124): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOD_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(128): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOE_OTYPER|= (copy_u8Type<< (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(132): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOF_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(136): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOG_OTYPER|= (copy_u8Type << (copy_u8PIN));
+                                                        ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOH_OTYPER|= (copy_u8Type<< (copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~
+GPIO_program.c(166): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOA_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                         ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(171): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOB_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                              ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOC_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(179): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOD_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(183): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOE_OSPEEDR|= (copy_u8Speed<< (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(187): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOF_OSPEEDR|= (copy_u8Speed << (2*copy_u8PIN));
+                                                              ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(191): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOG_OSPEEDR|= (copy_u8Speed<< (2*copy_u8PIN));
+                                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(195): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOH_OSPEEDR|= (copy_u8Speed<< (2*copy_u8PIN));
+                                                             ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOA_PUPDR|= (copy_u8PULL_TYPE << (2*copy_u8PIN));
+                                                       ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(225): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOB_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(229): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOC_PUPDR|= (copy_u8PULL_TYPE << (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(233): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOD_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(237): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOE_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                 GPIOF_PUPDR|= (copy_u8PULL_TYPE << (2*copy_u8PIN));
+                                                            ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(245): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                            GPIOG_PUPDR|= (copy_u8PULL_TYPE <<(2*copy_u8PIN));
+                                                       ~~  ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+GPIO_program.c(249): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                GPIOH_PUPDR|= (copy_u8PULL_TYPE<< (2*copy_u8PIN));
+                                                           ~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO_program.c(451): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOA_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(455): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOB_AFRL|= (copy_u8AlT<< (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(459): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOC_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(463): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOD_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(467): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOE_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(471): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOF_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(475): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOG_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(479): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                             GPIOH_AFRL|= (copy_u8AlT << (4U*copy_u8PIN));
+                                       ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+GPIO_program.c(492): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOA_AFRH|= (copy_u8AlT << (4U*(copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(496): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOB_AFRH|= (copy_u8AlT<< ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(500): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOC_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(504): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOD_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(508): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOE_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8U)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(512): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOF_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(516): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOG_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(520): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                          GPIOH_AFRH|= (copy_u8AlT << ((copy_u8PIN % 8)));
+                                    ~~  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+GPIO_program.c(527): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+49 warnings generated.
+compiling GPIO_program.c...
+".\UART.axf" - 1 Error(s), 93 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  E:\Keil_Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:10
+</pre>
+</body>
+</html>

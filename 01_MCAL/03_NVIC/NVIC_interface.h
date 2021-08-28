@@ -31,7 +31,7 @@
 
 	#include "STD_TYPE.h"
 	
-/*		 Enables an interrupt or exception.	   -------> ISERx		need Interrput Number				*/
+/*		 Enables an interrupt or exception.	   -------> ISERx		need Interrput Number	From Vector Table Referance Manual			*/
 void MNVIC_voidSetEnable(u8 Copy_u8IntNum ) ;
 
 /*		Disables an interrupt or exception.				*/

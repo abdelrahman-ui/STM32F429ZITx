@@ -152,7 +152,7 @@
 #define MSTR										2
 #define SPE 										6
 #define LSBFIRST								7
-#define  SSI										8
+#define SSI										  8
 #define SSM											9
 #define RXONLY									10
 #define DFF											11

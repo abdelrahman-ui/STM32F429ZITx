@@ -13,7 +13,7 @@
 *	 - Developer can't Edit in it    
 *	  - Register _ Defination		
 *	  - Design : 
-					- #define	:	NO
+					- #define	: Yes
 					- Union		:	NO
 					- Struct	:	NO
 

@@ -11,14 +11,14 @@
 		
 /*****************************************/
 
-#define GREEN_LED       13 
-#define RED_LED 				14
+#define GREEN_LED       13U 
+#define RED_LED 				14U
 
 int main (void)
 {
 						/* 			Enable CLK For GPIOG							*/
-	//MRCC_voidEnableClock(AHB1,PERIPHERAL_EN_GPIOG);
-	RCC_AHB1ENR |= (1U<<6);
+	MRCC_voidEnableClock(AHB1,PERIPHERAL_EN_GPIOG);
+	//RCC_AHB1ENR |= (1U<<6);
 						/*	The Mode Of Two LED (MODE_OUTPUT)			*/
 	MGOIP_voidSetPinMode(GPIOG,GREEN_LED,MODE_OUTPUT );
 	MGOIP_voidSetPinMode(GPIOG,RED_LED,MODE_OUTPUT )  ;
@@ -32,12 +32,26 @@ int main (void)
 	while(1)
 	{        /*  Trun On The Two Led      */
 		MGPIO_voidWriteDataOdr(GPIOG,GREEN_LED,HIGH);
-		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,HIGH);
+		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,LOW);
 					/*   Delay */
-		for(int i=0 ; i<500000 ; i++);
+	  volatile u32 Local_u32Count=0;
+		for( Local_u32Count; Local_u32Count<500000U ; Local_u32Count++);
 		MGPIO_voidWriteDataOdr(GPIOG,GREEN_LED,LOW);
-		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,LOW);	
-		for(int i=0 ; i<500000 ; i++);
+		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,HIGH);	
+		for( Local_u32Count=0U ; Local_u32Count<500000U; Local_u32Count++);
+		MGPIO_voidWriteDataOdr(GPIOG,GREEN_LED,HIGH);
+		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,HIGH);
+		for( Local_u32Count=0U ; Local_u32Count<500000U; Local_u32Count++);
+		MGPIO_voidWriteDataOdr(GPIOG,GREEN_LED,LOW);
+		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,LOW);
+		for( Local_u32Count=0U ; Local_u32Count<500000U; Local_u32Count++);
+		for( Local_u32Count=0U ; Local_u32Count<500000U; Local_u32Count++);
+		MGPIO_voidWriteDataOdr(GPIOG,GREEN_LED,HIGH);
+		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,HIGH);
+		for( Local_u32Count=0U ; Local_u32Count<500000U; Local_u32Count++);
+		MGPIO_voidWriteDataOdr(GPIOG,GREEN_LED,LOW);
+		MGPIO_voidWriteDataOdr(GPIOG,RED_LED,LOW);
+		for( Local_u32Count=0U ; Local_u32Count<500000U; Local_u32Count++);
 
 	}
 	

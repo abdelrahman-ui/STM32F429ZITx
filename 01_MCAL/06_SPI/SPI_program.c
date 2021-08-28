@@ -52,6 +52,8 @@
 						- NssMode       : NSS_MODE_SW  , NSS_MODE_HW
 						- BiDirMode     : Bi_Dir_ON    , Bi_Dir_OFF
 						- EN SPI
+						- Bit 10 if 1 Resive only
+						- ssm : automatic make ss low and after high but only when have only one slave 
 				To Iniat The SPI 
 		
 		*/

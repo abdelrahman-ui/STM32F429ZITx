@@ -126,7 +126,7 @@ void MNVIC_voidSetPending(u8 Copy_u8IntNum)
 
 /********************************************************** Start_FUNCTION  **********************************************************/
 /*		Function :	
-					SetPending
+					Clear Pending
 						*/
 void MNVIC_voidClearPending(u8 Copy_u8IntNum)
 {
@@ -184,43 +184,44 @@ u8	 MNVIC_voidGetActiveFlag(u8 Copy_u8IntNum)
 
 /********************************************************** Start_FUNCTION  **********************************************************/
 /*		Function :	 * Handel Only External Int Priority	
-					 * Divide And Put Your Priority
+					 * Divide REG From SCB From  And Put Your Priority In IPR Bit  ( 4 , 5 , 6 , 7 ) So Must << 4 bit
 					 
 		*/
 void MNVIC_voidSetPriority(u8 Copy_u8IntNum, u8 Copy_u8GroupPriority , u8 Copy_u8SubGroupPriority , u8 Copy_u8GroupPriorityCFG  )	
-{	
+{	/* Switch From Private  */
 	switch(Copy_u8GroupPriorityCFG)
 	{
 			/* All For Group */
 	   case GROUP_PRIORITY_CFG0:		
-						/*		PassWord + Case (  (4) For Group  &  (0) For SubGroub		*/	
+						/*		PassWord (0x05FA)+ Case (  (4) For Group  &  (0) For SubGroub		*/	
 						SCB_AIRCR =0x05FA0300;
-							/*	At IPR[Indx] Put The Four Bit For Group  */		
-						NVIC_IPR[Copy_u8IntNum]= (Copy_u8GroupPriority<<4U);		 
+							/*	At IPR[Indx] Put The Four Bit For Group  */	
+							/*  Index is The Peripheral ID From Vector Table*/
+						NVIC_IPR[Copy_u8IntNum]= (u8)(Copy_u8GroupPriority<<4U);		 
 	   break ;
    /**************************/		 
 	   case GROUP_PRIORITY_CFG1 :								 
 						/*		PassWord + Case (  (3) For Group  &  (1) For SubGroub		*/
 						SCB_AIRCR |= 0x05FA0400 ;					 
-						NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<5U)|(Copy_u8SubGroupPriority << 4U)	;									 
+						NVIC_IPR[Copy_u8IntNum]= (u8) (Copy_u8GroupPriority<<5U)|((u8)(Copy_u8SubGroupPriority << 4U))	;									 
 	   	break ;	
    /**************************/			 
 	   case GROUP_PRIORITY_CFG2 :								 
 						/*		PassWord + Case (  (2) For Group  &  (2) For SubGroub		*/
 						SCB_AIRCR =0X05FA0500 ;					 
-							NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<6U)|(Copy_u8SubGroupPriority << 4U)	;													 
+							NVIC_IPR[Copy_u8IntNum]=(u8) (Copy_u8GroupPriority<<6U)|((u8)(Copy_u8SubGroupPriority << 4U))	;													 
 	   	break ;	
    /**************************/			 
 	   case GROUP_PRIORITY_CFG3 :								 
 						/*		PassWord + Case (  (1) For Group  &  (3) For SubGroub		*/
 						SCB_AIRCR=0X05FA0600 ;					 
-						NVIC_IPR[Copy_u8IntNum]=(Copy_u8GroupPriority<<7U)|(Copy_u8SubGroupPriority << 4U)	;
+						NVIC_IPR[Copy_u8IntNum]= (u8)(Copy_u8GroupPriority<<7U)|((u8)(Copy_u8SubGroupPriority << 4U))	;
 		 break ;
    /**************************/														 
 	   case GROUP_PRIORITY_CFG4 :								 
 						/*		PassWord + Case (  (0) For Group  &  (4) For SubGroub		*/
 						SCB_AIRCR =0X05FA0700 ;
-						NVIC_IPR[Copy_u8IntNum]=(Copy_u8SubGroupPriority << 4U)	;
+						NVIC_IPR[Copy_u8IntNum]=(u8)(Copy_u8SubGroupPriority << 4U)	;
 		 	 break ;
    /**************************/	
 

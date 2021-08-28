@@ -54,14 +54,14 @@
 		 
 	        switch (copy_u8PORT)
 	        {
-	  	      case GPIOA: GPIOA_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOB: GPIOB_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOC: GPIOC_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOD: GPIOD_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOE: GPIOE_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOF: GPIOF_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOG: GPIOG_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;
-					  case GPIOH: GPIOH_MODER |= (copy_u8MODE << (2*copy_u8PIN)); break;		
+	  	      case GPIOA: GPIOA_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOB: GPIOB_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOC: GPIOC_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOD: GPIOD_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOE: GPIOE_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOF: GPIOF_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOG: GPIOG_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;
+					  case GPIOH: GPIOH_MODER |=(u32)  (copy_u8MODE << (2*copy_u8PIN)); break;		
 					  default: break;		
 		     }
 	 
@@ -82,14 +82,14 @@ void MGPIO_voidSetOutType(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Type)
 {
 		      switch (copy_u8PORT)
 		      {
-			      case GPIOA: GPIOA_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOB: GPIOB_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOC: GPIOC_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOD: GPIOD_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOE: GPIOE_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOF: GPIOF_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOG: GPIOG_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;
-						case GPIOH: GPIOH_OTYPER |= (copy_u8Type << (copy_u8PIN)); break;		
+			      case GPIOA: GPIOA_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOB: GPIOB_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOC: GPIOC_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOD: GPIOD_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOE: GPIOE_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOF: GPIOF_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOG: GPIOG_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;
+						case GPIOH: GPIOH_OTYPER |=(u32)  (copy_u8Type << (copy_u8PIN)); break;		
 						default: break;
 		      }
 }
@@ -112,14 +112,14 @@ void MGPIO_voidSetOutType(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Type)
 {
 		      switch (copy_u8PORT)
 		      {
-			      case GPIOA: GPIOA_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOB: GPIOB_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOC: GPIOC_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOD: GPIOD_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOE: GPIOE_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOF: GPIOF_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOG: GPIOG_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;
-						case GPIOH: GPIOH_OSPEEDR |= (copy_u8Speed << (2*copy_u8PIN)); break;		
+			      case GPIOA: GPIOA_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOB: GPIOB_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOC: GPIOC_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOD: GPIOD_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOE: GPIOE_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOF: GPIOF_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOG: GPIOG_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;
+						case GPIOH: GPIOH_OSPEEDR |=(u32) (copy_u8Speed << (2*copy_u8PIN)); break;		
 						default: break;		
 			      
 		      }
@@ -141,14 +141,14 @@ void MGPIO_voidSetOutType(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Type)
 {
 		      switch (copy_u8PORT)
 		      {
-			      case GPIOA: GPIOA_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOB: GPIOB_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOC: GPIOC_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOD: GPIOD_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOE: GPIOE_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOF: GPIOF_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOG: GPIOG_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
-						case GPIOH: GPIOH_PUPDR |= (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;		
+			      case GPIOA: GPIOA_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOB: GPIOB_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOC: GPIOC_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOD: GPIOD_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOE: GPIOE_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOF: GPIOF_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOG: GPIOG_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;
+						case GPIOH: GPIOH_PUPDR |=(u32)  (copy_u8PULL_TYPE << (2*copy_u8PIN)); break;		
 						default: break;
 			      
 		      }
@@ -166,14 +166,14 @@ void MGPIO_voidSetOutType(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Type)
 			
 		      switch (copy_u8PORT)
 		      {
-			      case GPIOA: u8Local_Data = (GPIOA_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOB: u8Local_Data = (GPIOB_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOC: u8Local_Data = (GPIOC_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOD: u8Local_Data = (GPIOD_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOE: u8Local_Data = (GPIOE_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOF: u8Local_Data = (GPIOF_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOG: u8Local_Data = (GPIOG_IDR &(1U<<copy_u8PIN)); break;
-						case GPIOH: u8Local_Data = (GPIOH_IDR &(1U<<copy_u8PIN)); break;		
+			      case GPIOA: u8Local_Data = (u32) (GPIOA_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOB: u8Local_Data = (u32) (GPIOB_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOC: u8Local_Data = (u32) (GPIOC_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOD: u8Local_Data = (u32) (GPIOD_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOE: u8Local_Data = (u32) (GPIOE_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOF: u8Local_Data = (u32) (GPIOF_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOG: u8Local_Data = (u32) (GPIOG_IDR &(1U<<copy_u8PIN)); break;
+						case GPIOH: u8Local_Data = (u32) (GPIOH_IDR &(1U<<copy_u8PIN)); break;		
 						default: break;
 			      
 		      }
@@ -299,14 +299,14 @@ void MGOIP_voidPinSetAltFn(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8AlT)
 	{
 		     switch (copy_u8PORT)
 		     {
-			     case GPIOA: GPIOA_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOB: GPIOB_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOC: GPIOC_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOD: GPIOD_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOE: GPIOE_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOF: GPIOF_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOG: GPIOG_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;
-					 case GPIOH: GPIOH_AFRL |= (copy_u8AlT << (4*copy_u8PIN)); break;		
+			     case GPIOA: GPIOA_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOB: GPIOB_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOC: GPIOC_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOD: GPIOD_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOE: GPIOE_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOF: GPIOF_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOG: GPIOG_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;
+					 case GPIOH: GPIOH_AFRL |=(u32) (copy_u8AlT << (4U*copy_u8PIN)); break;		
 					 default: break;	
 		     }
 		
@@ -316,14 +316,14 @@ void MGOIP_voidPinSetAltFn(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8AlT)
 	{
 		  switch (copy_u8PORT)
 		  {
-			  case GPIOA: GPIOA_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOB: GPIOB_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOC: GPIOC_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOD: GPIOD_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOE: GPIOE_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOF: GPIOF_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOG: GPIOG_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
-				case GPIOH: GPIOH_AFRH |= (copy_u8AlT << (4*(copy_u8PIN% 8))); break;		
+			  case GPIOA: GPIOA_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOB: GPIOB_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOC: GPIOC_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOD: GPIOD_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOE: GPIOE_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOF: GPIOF_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOG: GPIOG_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;
+				case GPIOH: GPIOH_AFRH |=(u32)  (copy_u8AlT << (4*(copy_u8PIN% 8))); break;		
 				default: break;	
 		  }
 		

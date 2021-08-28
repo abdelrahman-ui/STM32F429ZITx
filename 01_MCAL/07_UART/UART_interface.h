@@ -29,9 +29,11 @@
 #ifndef UART_INTERFACE_H
 #define UART_INTERFACE_H
 
-#include "STD_TYPES.h"
+#include "STD_TYPE.h"
 
-void UART_voidInit(void);
+
+/*  Function To Init The UART */
+void UART1_voidInit(void);
 void UART1_voidEN(void);
 void UART_voidWrite(u8 ch);
 void UART_voidRead(void);

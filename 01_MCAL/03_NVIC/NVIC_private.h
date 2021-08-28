@@ -93,7 +93,7 @@
 /*			
  	-----> Macros
 	*  Register Map --------->AIRCR To Submet The Group & SubGroup
-	* Statuse Of Group And Sub
+	* Statuse Of Group And Sub Application interrupt and reset control register (AIRCR)
 */
 #define  SCB_AIRCR 								(*((volatile u32 *) ( SCB_Base_Address + 0xc)))
 

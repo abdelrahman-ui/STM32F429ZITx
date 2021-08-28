@@ -1,0 +1,107 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abdelrahman Magdy, valeu, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\STM32F429ZITx\01_MCAL\09_SYSTICK\SYSTICK.uvprojx
+Project File Date:  08/27/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'SysTick'
+compiling main.c...
+RCC_program.c(71): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                        default         :  
+                                        ^
+RCC_program.c(107): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                         default : 
+                                         ^
+RCC_program.c(114): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default         :  break;
+                        ^
+RCC_program.c(153): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default: break;
+                ^
+RCC_program.c(195): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default: break;
+                        ^
+RCC_program.c(215): warning: enumeration values 'AHB_Pre32' and 'AHB_Pre256' not explicitly handled in switch [-Wswitch-enum]
+                        switch (AHB_Prescaler)
+                                ^
+6 warnings generated.
+compiling RCC_program.c...
+STK_program.c(55): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        while( (GET_BIT(MSTK->CTRL,16)) != 0){};
+                                               ^
+STK_program.c(182): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+STK_program.c(182): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+2 warnings generated.
+compiling STK_program.c...
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
+GPIO_program.c(25): warning: In file included from...
+./GPIO_config.h(37): warning: no newline at end of file [-Wnewline-eof]
+#endif /* GPIO_CONFIG_H_ */
+                           ^
+1 warning generated.
+compiling GPIO_program.c...
+linking...
+Program Size: Code=1352 RO-data=444 RW-data=0 ZI-data=1640  
+".\Objects\SYSTICK.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_SysTick
+  C:\Users\Pro\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\Pro\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

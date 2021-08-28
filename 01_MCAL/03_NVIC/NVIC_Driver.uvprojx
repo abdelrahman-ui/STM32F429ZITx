@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -259,17 +259,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -279,7 +279,7 @@
                 <Size>0x200000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -393,6 +393,16 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>RCC_program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RCC_program.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\GPIO_program.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -422,6 +432,36 @@
               <FileName>BIT_MATH.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\BIT_MATH.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RCC_private.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RCC_interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\GPIO_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\GPIO_interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\GPIO_private.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RCC_config.h</FilePath>
             </File>
           </Files>
         </Group>

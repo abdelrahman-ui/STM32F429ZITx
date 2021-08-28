@@ -88,6 +88,7 @@ void MGOIP_voidPinSetAltFn(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8AlT)  ;
 #define  PIN13										13
 #define  PIN14										14
 #define  PIN15										15
+
 			/*Macros Of Mode*/
 #define MODE_INPUT							 	((u8)0x00)
 #define MODE_OUTPUT							 	((u8)0x01)
@@ -97,12 +98,14 @@ void MGOIP_voidPinSetAltFn(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8AlT)  ;
 			/*Macros Of Type*/
 #define  OUTPUT_TYPE_PUSH_PULL		((u8)0x0)
 #define  OUTPUT_TYPE_OPEN_DRAIN		((u8)0x1)
+
 			/*Macros Of Speed*/
 			
 #define OUTPUT_LOW_SPEED					((u8)0x00)
 #define OUTPUT_MEDUIM_SPEED				((u8)0x01)
 #define OUTPUT_HIGH_SPEED					((u8)0x10)
 #define OUTPUT_VERY_HIGH_SPEED		((u8)0x11)		
+
 			/*Macros Of PULL*/	
 #define PULL_OFF									((u8)0x00)							
 #define PULL_UP										((u8)0x01)

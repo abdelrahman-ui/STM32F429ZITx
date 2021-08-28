@@ -55,17 +55,17 @@
 				switch (HSESrc)
 				{	// HSE CRYSTAL 
 					case  HSE_Crystal :
-						SET_BIT(RCC_CR   , 16) ;		// EN HSE
-						CLR_BIT(RCC_CR   , 18) ;		// Disable Byp
-						SET_BIT(RCC_CFGR , 0 ) ;		// System Clk  HSE
-						CLR_BIT(RCC_CFGR , 1 ) ;		// System Clk  HSE
+						SET_BIT(RCC_CR   , 16U) ;		// EN HSE
+						CLR_BIT(RCC_CR   , 18U) ;		// Disable Byp
+						SET_BIT(RCC_CFGR , 0U ) ;		// System Clk  HSE
+						CLR_BIT(RCC_CFGR , 1U ) ;		// System Clk  HSE
 					break; 
 					// HSE RC
 					case  HSE_RC :
-						SET_BIT(RCC_CR   , 16) ;				// EN HSE
-						SET_BIT(RCC_CR   , 18) ;				// Enable Byp
-						SET_BIT(RCC_CFGR , 0 ) ;				// System Clk  HSE
-						CLR_BIT(RCC_CFGR , 1 ) ;				// System Clk  HSE
+						SET_BIT(RCC_CR   , 16U) ;				// EN HSE
+						SET_BIT(RCC_CR   , 18U) ;				// Enable Byp
+						SET_BIT(RCC_CFGR , 0U ) ;				// System Clk  HSE
+						CLR_BIT(RCC_CFGR , 1U ) ;				// System Clk  HSE
 					break;
 					
 					default		:  
@@ -77,9 +77,9 @@
 			 /*******************************************************************************/ 
 			 // HSI  
 			case HSI_CLK	: 
-				SET_BIT(RCC_CR   , 0   ) ;           // EN HSI
-				CLR_BIT(RCC_CFGR , 0   ) ;					 // System Clk  HSI
-				CLR_BIT(RCC_CFGR , 1   ) ;					 // System Clk  HSI
+				SET_BIT(RCC_CR   , 0U   ) ;           // EN HSI
+				CLR_BIT(RCC_CFGR , 0U   ) ;					 // System Clk  HSI
+				CLR_BIT(RCC_CFGR , 1U   ) ;					 // System Clk  HSI
 			 break; 
 			/*********************************************************************************/
 			// PLL 
@@ -88,18 +88,18 @@
 				 {
 					 // PLL HSE 
 					 case PLL_HSE :
-							 SET_BIT(RCC_CR , 16) ;						// EN HSE
-							 SET_BIT(RCC_CR , 24) ;						//  EN PLL
-							 SET_BIT(RCC_PLLCFGR ,22) ;				//  PLL From HSE 
-							 CLR_BIT(RCC_CFGR , 0 ) ;					// System Clk  PLL
-							 SET_BIT(RCC_CFGR , 1 ) ;				  // System Clk  PLL
+							 SET_BIT(RCC_CR , 16U) ;						// EN HSE
+							 SET_BIT(RCC_CR , 24U) ;						//  EN PLL
+							 SET_BIT(RCC_PLLCFGR ,22U) ;				//  PLL From HSE 
+							 CLR_BIT(RCC_CFGR , 0U ) ;					// System Clk  PLL
+							 SET_BIT(RCC_CFGR , 1U ) ;				  // System Clk  PLL
 					 break ;
 					 // PLL HSI
 					 case PLL_HSI :
-					     SET_BIT(RCC_CR ,   0   ) ;            // EN HSI
-							 SET_BIT(RCC_CR ,  24)    ;					 	//  EN PLL
-							 CLR_BIT(RCC_PLLCFGR ,22) ;					  //  PLL From HSI
-							 CLR_BIT(RCC_CFGR , 0 )   ;					  // System Clk  PLL
+					     SET_BIT(RCC_CR ,   0U   ) ;            // EN HSI
+							 SET_BIT(RCC_CR ,  24U)    ;					 	//  EN PLL
+							 CLR_BIT(RCC_PLLCFGR ,22U) ;					  //  PLL From HSI
+							 CLR_BIT(RCC_CFGR , 0U )   ;					  // System Clk  PLL
 							 SET_BIT(RCC_CFGR , 1 )   ;				    // System Clk  PLL
 							 
 					 break ;
@@ -126,29 +126,29 @@
 	switch (APB1_Prescaler)
 	{
 		case ABP1_Pre1:
-			CLR_BIT(RCC_CFGR , 10) ;
-			CLR_BIT(RCC_CFGR , 11) ;
-			CLR_BIT(RCC_CFGR, 12) ;
+			CLR_BIT(RCC_CFGR , 10U) ;
+			CLR_BIT(RCC_CFGR , 11U) ;
+			CLR_BIT(RCC_CFGR , 12U) ;
 		break; 
 		case ABP1_Pre2:
-			CLR_BIT(RCC_CFGR , 10) ;
-			CLR_BIT(RCC_CFGR , 11) ;
-			SET_BIT(RCC_CFGR,  12) ;
+			CLR_BIT(RCC_CFGR , 10U) ;
+			CLR_BIT(RCC_CFGR , 11U) ;
+			SET_BIT(RCC_CFGR,  12U) ;
 		break;
 		case ABP1_Pre4:
-			SET_BIT(RCC_CFGR , 10) ;
-			CLR_BIT(RCC_CFGR , 11) ;
-			SET_BIT(RCC_CFGR,  12) ;
+			SET_BIT(RCC_CFGR , 10U) ;
+			CLR_BIT(RCC_CFGR , 11U) ;
+			SET_BIT(RCC_CFGR,  12U) ;
 		break;
 		case ABP1_Pre8:
-			CLR_BIT(RCC_CFGR , 10) ;
-			SET_BIT(RCC_CFGR , 11) ;
-			SET_BIT(RCC_CFGR,  12) ;
+			CLR_BIT(RCC_CFGR , 10U) ;
+			SET_BIT(RCC_CFGR , 11U) ;
+			SET_BIT(RCC_CFGR,  12U) ;
 		break;
 		case ABP1_Pre16:
-			SET_BIT(RCC_CFGR , 10) ;
-			SET_BIT(RCC_CFGR , 11) ;
-			SET_BIT(RCC_CFGR,  12) ;
+			SET_BIT(RCC_CFGR , 10U) ;
+			SET_BIT(RCC_CFGR , 11U) ;
+			SET_BIT(RCC_CFGR,  12U) ;
 		break;
 		default: break;
 		
@@ -167,14 +167,14 @@
 		switch (APB2_Prescaler)
 		{
 			case  ABP2_Pre1 :
-				CLR_BIT(RCC_CFGR , 13) ;
-				CLR_BIT(RCC_CFGR , 14) ;
-				CLR_BIT(RCC_CFGR , 15) ;
+				CLR_BIT(RCC_CFGR , 13U) ;
+				CLR_BIT(RCC_CFGR , 14U) ;
+				CLR_BIT(RCC_CFGR , 15U) ;
 			break;
 			case  ABP2_Pre2 :
-				CLR_BIT(RCC_CFGR , 13) ;
-				CLR_BIT(RCC_CFGR , 14) ;
-				SET_BIT(RCC_CFGR , 15) ;
+				CLR_BIT(RCC_CFGR , 13U) ;
+				CLR_BIT(RCC_CFGR , 14U) ;
+				SET_BIT(RCC_CFGR , 15U) ;
 			break;
 			case  ABP2_Pre4 :
 				SET_BIT(RCC_CFGR , 13) ;
@@ -182,14 +182,14 @@
 				SET_BIT(RCC_CFGR , 15) ;
 			break;
 			case  ABP2_Pre8 :
-				CLR_BIT(RCC_CFGR , 13) ;
-				SET_BIT(RCC_CFGR , 14) ;
-				SET_BIT(RCC_CFGR , 15) ;
+				CLR_BIT(RCC_CFGR , 13U) ;
+				SET_BIT(RCC_CFGR , 14U) ;
+				SET_BIT(RCC_CFGR , 15U) ;
 			break;
 			case  ABP2_Pre16 :
-				SET_BIT(RCC_CFGR , 13) ;
-				SET_BIT(RCC_CFGR , 14) ;
-				SET_BIT(RCC_CFGR , 15) ;
+				SET_BIT(RCC_CFGR , 13U) ;
+				SET_BIT(RCC_CFGR , 14U) ;
+				SET_BIT(RCC_CFGR , 15U) ;
 			break;
 			
 			default: break;
@@ -215,59 +215,60 @@
 			switch (AHB_Prescaler)
 			{
 				case AHB_Pre1 :
-						CLR_BIT(RCC_CFGR , 4 ) ;
-						CLR_BIT(RCC_CFGR , 5 ) ;
-						CLR_BIT(RCC_CFGR , 6 ) ;
-						CLR_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre2 :
-						CLR_BIT(RCC_CFGR , 4 ) ;
-						CLR_BIT(RCC_CFGR , 5 ) ;
-						CLR_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre4 :
-						SET_BIT(RCC_CFGR , 4 ) ;
-						CLR_BIT(RCC_CFGR , 5 ) ;
-						CLR_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre8 :
-						CLR_BIT(RCC_CFGR , 4 ) ;
-						SET_BIT(RCC_CFGR , 5 ) ;
-						CLR_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre16 :
-						SET_BIT(RCC_CFGR , 4 ) ;
-						SET_BIT(RCC_CFGR , 5 ) ;
-						CLR_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre64 :
-						CLR_BIT(RCC_CFGR , 4 ) ;
-						CLR_BIT(RCC_CFGR , 5 ) ;
-						SET_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre128 :
-						CLR_BIT(RCC_CFGR , 4 ) ;
-						SET_BIT(RCC_CFGR , 5 ) ;
-						SET_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
-				break ;
-				/***********/
-				case AHB_Pre512 :
-						SET_BIT(RCC_CFGR , 4 ) ;
-						SET_BIT(RCC_CFGR , 5 ) ;
-						SET_BIT(RCC_CFGR , 6 ) ;
-						SET_BIT(RCC_CFGR , 7 ) ;
+						CLR_BIT(RCC_CFGR , 4U ) ;
+						CLR_BIT(RCC_CFGR , 5U ) ;
+						CLR_BIT(RCC_CFGR , 6U ) ;
+						CLR_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre2 :         
+						CLR_BIT(RCC_CFGR , 4U ) ;
+						CLR_BIT(RCC_CFGR , 5U ) ;
+						CLR_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre4 :         
+						SET_BIT(RCC_CFGR , 4U ) ;
+						CLR_BIT(RCC_CFGR , 5U ) ;
+						CLR_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre8 :       
+					
+						CLR_BIT(RCC_CFGR , 4U ) ;
+						SET_BIT(RCC_CFGR , 5U ) ;
+						CLR_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre16 :        
+						SET_BIT(RCC_CFGR , 4U ) ;
+						SET_BIT(RCC_CFGR , 5U ) ;
+						CLR_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre64 :        
+						CLR_BIT(RCC_CFGR , 4U ) ;
+						CLR_BIT(RCC_CFGR , 5U ) ;
+						SET_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre128 :       
+						CLR_BIT(RCC_CFGR , 4U ) ;
+						SET_BIT(RCC_CFGR , 5U ) ;
+						SET_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
+				break ;                 
+				/***********/           
+				case AHB_Pre512 :       
+						SET_BIT(RCC_CFGR , 4U ) ;
+						SET_BIT(RCC_CFGR , 5U ) ;
+						SET_BIT(RCC_CFGR , 6U ) ;
+						SET_BIT(RCC_CFGR , 7U ) ;
 				break ;
 				/***********/
 				default: break; 
